@@ -1,0 +1,38 @@
+name: Deploy Beijing City Explorer
+on:
+  push:
+    branches: [main]
+  workflow_dispatch:
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+concurrency:
+  group: pages
+  cancel-in-progress: true
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v6
+        with:
+          persist-credentials: false
+      - uses: actions/configure-pages@v5
+      - name: Assemble static city site
+        run: |
+          mkdir _site
+          cp index.html .nojekyll _site/
+          cp -r project docs _site/
+          python3 -m zipfile -e runtime-data.zip _site
+          test -s _site/project/web/index.html
+          test -s _site/project/web/cbd-preview.html
+          test -s _site/project/data/runtime/collision.bin
+      - uses: actions/upload-pages-artifact@v4
+        with:
+          path: _site
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
