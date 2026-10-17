@@ -1,7 +1,7 @@
 {
-  "candidateBuild": "beijing-r2-cbd-candidate-12-roof-stability",
-  "candidateSourceTreeSHA256": "f563e32b9ba8a26e7eb023612fe1081ecd48759df1dc0c9b187c7f295e7e8846",
-  "scope": "public independent CBD targeted roof repair and diagnostic controls; panorama retains its previous CBD implementation",
+  "candidateBuild": "beijing-r2-cbd-candidate-13-road-ownership",
+  "candidateSourceTreeSHA256": "d3878781821f4183ec58fe8282c4f6e99e0c7638eb39b7a92ac50bb0fbc01964",
+  "scope": "public independent CBD targeted road surface repair and diagnostic controls; panorama retains its previous CBD implementation",
   "rootEntry": "index.html",
   "visualAcceptance": "Source geometry CPU image and structural checks; temporal WebGL flicker remains unverified"
 }

@@ -1,7 +1,7 @@
 {
-  "buildID": "beijing-r2-cbd-candidate-12-roof-stability",
-  "utc": "2026-10-17T11:00:15.606667+00:00",
-  "status": "candidate12_targeted_roof_surface_repair_CPU_image_reviewed_diagnostic_UI_WebGL_temporal_pending",
+  "buildID": "beijing-r2-cbd-candidate-13-road-ownership",
+  "utc": "2026-10-17T11:34:40.592834+00:00",
+  "status": "candidate13_targeted_road_surface_ownership_CPU_image_reviewed_WebGL_temporal_pending",
   "scope": "Independent CBD candidate; previous Yandai sample retained, no propagation",
   "baselineRuntimeSHA256": "d88c7e45c6ba3f023edcc5624f2853a5229e9dd17c3bd544b984260fe4100e47",
   "dataSHA256": "9ec30d8046fc47dda47608020b9c98367e242bf5ca75e12dba057e2ee8e186a5",
@@ -22,10 +22,10 @@
     "flickerFixClaimed": false,
     "realCompanyEmblemCount": 0
   },
-  "sourceTreeSHA256": "f563e32b9ba8a26e7eb023612fe1081ecd48759df1dc0c9b187c7f295e7e8846",
+  "sourceTreeSHA256": "d3878781821f4183ec58fe8282c4f6e99e0c7638eb39b7a92ac50bb0fbc01964",
   "webSourceHashes": {
     "cbd-preview.css": "78b46605916188d6c6de731d29ccf78177231dddf58f6c6c23f51fe54fbe8ddc",
-    "cbd-preview.html": "d6e2ebad05b596b302ee8cb0cd68f1ae172268b90da894ffc60d382df8d19066",
+    "cbd-preview.html": "0d0b5c075020dc9585acaee6288e7ebc37331175d2ffc505bbe6a032972f8301",
     "data/cbd-scene.json": "9ec30d8046fc47dda47608020b9c98367e242bf5ca75e12dba057e2ee8e186a5",
     "index.html": "c754e6ba2198fe3e078ab2d0866121f38dfcf7c6f286851a4dc082c056b5db84",
     "package.json": "a97b81bcc4659f5f3ea1b2bdf4fbad85dc74bb15fdf7b0818e1bf3423d945d57",
@@ -149,7 +149,7 @@
     "src/round2/cbd-facade-identities/index.js": "65e1db50b7bb25ed8358abcba6cce852569f1011e08d639cae4e4c81a68114b9",
     "src/round2/cbd-forecourt-route/index.js": "a3601a91eccd89f844858911379afd0b030dca00ffecefba1b3ab76db66e3896",
     "src/round2/cbd-frontages/index.js": "6841e66e9da852230447f5f69e9e725acde63612feae349a216ad943de020fd6",
-    "src/round2/cbd-main.js": "edcc3fdd62884cb01edf2c11f2b4c973d31b97e31b067999d542f6c72d15d438",
+    "src/round2/cbd-main.js": "74aabda846ff9fdbb7e645d247a3a7e3174a248233bec6fdbcd6fab6080128a6",
     "src/round2/cbd-major-facades/index.js": "1ca32cd54c47dcde7e5bd0e98759d50c8bc9a9a0f579bc127faa1b9198367001",
     "src/round2/cbd-mall-corner/FONT_LICENSE.txt": "65e784704b9bf8bf4cf86aff1b91830ec164387c7af0a6a52343b2945ffa93de",
     "src/round2/cbd-mall-corner/canopy-volume.js": "064b067e66aa2a309d5df38bd510091a5e90278c2e78110602bb0722ca2a0489",
@@ -162,7 +162,7 @@
     "src/round2/cbd-mall-corner/visible-trees.js": "8e9799a9d3e703359895bc16ee018993e57bec41520f76f98e1fdf032dabe438",
     "src/round2/cbd-mall-junction/clipping.js": "f008d2ef30d6172e9ee094a471e00fd0601b70023590acbb5713ca455f119d6d",
     "src/round2/cbd-mall-junction/control.js": "c476c6bde70f747cda19f186f91be71a782404bb5eba0a8faead906c7d95530b",
-    "src/round2/cbd-mall-junction/index.js": "513f3f511d620ff3c30bdec2a154207637b100c2094af014e4d62c12945406e4",
+    "src/round2/cbd-mall-junction/index.js": "95fe93938ba45ca7cafb34f9d6bd61c20174021ebd28940a337401d162f899aa",
     "src/round2/cbd-mall-junction/plan.js": "80631b87c4cb17c0571b9b272ba4019cad40487c2c234986dbca71a55f8a686c",
     "src/round2/cbd-millennium-correction/FONT_LICENSE.txt": "65e784704b9bf8bf4cf86aff1b91830ec164387c7af0a6a52343b2945ffa93de",
     "src/round2/cbd-millennium-correction/index.js": "f19762d3d515962e9898a7a6353bdc90689034177ae8b241826ca57efe50cb50",
@@ -173,13 +173,14 @@
     "src/round2/cbd-photo-street/glyph-data.js": "ac372847d83007ad97e800ea91c3668e0e5e23b3c1bfa51b917ea88c936d0880",
     "src/round2/cbd-photo-street/index.js": "268ccf748b95abdc3cb644842daea7d12d09f4c45bf52ce5c184b6741d91104a",
     "src/round2/cbd-photo-street/lettering.js": "edfef48d1a8447d6c00a2392aebd7b20b04fd63fa073ae0c88a09cf2e5cf68ee",
-    "src/round2/cbd-render-stability/index.js": "a43735d1d59a2a54164dcd0360b2262dfbad020e2e3b8608d80777406bd5b283",
-    "src/round2/cbd-render-stability/ui.js": "43460f4995476bd323578e08bff0246011d5127811236983ee1cbb160b2a1a1c",
+    "src/round2/cbd-render-stability/index.js": "bebcaa1fb9e524dd683a3b396c77a2b9360730f42bc81096cddbe41a669bbb85",
+    "src/round2/cbd-render-stability/ui.js": "17a1a71c1f034377cfccf76868a202f47172a70fa2442932127418b92ecd7db2",
+    "src/round2/cbd-road-surface-ownership/index.js": "4b17b63a5d4bc3f52522b5681beec9b95c8caf0cff683c760719ae76e00fd28b",
     "src/round2/cbd-roof-details/FONT_LICENSE.txt": "65e784704b9bf8bf4cf86aff1b91830ec164387c7af0a6a52343b2945ffa93de",
     "src/round2/cbd-roof-details/glyph-data.js": "79855023d20b698007ab9731d5e99851079aa2f1a4246df8e09a56adfaca18ef",
     "src/round2/cbd-roof-details/index.js": "3a588421d381c18626035b475e07393ed3507b2d1054c4afb79708a23008adbf",
     "src/round2/cbd-roof-surface-ownership/index.js": "c33f4da67b35c6b8379f48ab34561de74e5a78cc5bc04fef68f2404f266b4d7c",
-    "src/round2/cbd-scene.js": "fa23648bb7a35a102a9bc533b12dec33b2f508982872bf4f6bd2e35880441a9b",
+    "src/round2/cbd-scene.js": "bb74fd68d09eabd6cb8a6804aa3b282808fbe36228c25bbc7bd6481383a64a81",
     "src/round2/cbd-second-identities/FONT_LICENSE.txt": "65e784704b9bf8bf4cf86aff1b91830ec164387c7af0a6a52343b2945ffa93de",
     "src/round2/cbd-second-identities/glyph-data.js": "058550b5e801a72f130370e4bfe37318c7ee6806da0550a8084a9f47f001fb87",
     "src/round2/cbd-second-identities/index.js": "6ac1c7e502ac82671212c96f8ce581468910692f76edd94678531635d4d0c8ad",
@@ -200,7 +201,7 @@
     "src/street-corners.js": "417674ecc4487e3d86df5bae7c4b83de8887e99d8efdb8b84306c4470fd4ca74",
     "src/streetscape.js": "a97818f128908485de78d13827e7a813ca17fe736362f525d7ed694bbbe2d6d9",
     "src/surface-detail.js": "1e57db3904a4a374047a301142933847433bb96b4b6570d93071fd5563b0ba75",
-    "src/terrain.js": "874ee72f95d15bae4fd43e6ccaede79c7a7bc7fd2de5392b801af799cd65b455",
+    "src/terrain.js": "46960dcf56e9109d96311e60e1aa5cf1e92e71dbb176de54dfc0de4f2ec29091",
     "src/traditional-corridors.js": "7874eaa8f1d5c607d5475c99ce6cd39406b2f58962a41efca7029cb14229ea32",
     "src/traffic-signals.js": "7dd1bbe6f8144ece0112bd55cf81097918a8abe8c5a805a8ca0441ccade386d5",
     "src/traffic.js": "45ab2f0d1ef927dbb86edfe7e4485f552890e11bc0dcabaaa67bface4c763ce0",
@@ -216,7 +217,7 @@
     "vendor/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
     "vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
   },
-  "candidate": 12,
+  "candidate": 13,
   "batch12": {
     "roofSurfaceOwnership": "Exact covered upward cap portions removed, facade/footprint/building height retained; B silver cap changed to same-size perimeter bars",
     "treeLOD": "CBD-only .12 hysteresis; global-city legacy tree policy unchanged",
@@ -251,6 +252,55 @@
         "Conventional depth precision and shadows need live WebGL A/B",
         "CPU image does not establish temporal stability"
       ]
+    }
+  },
+  "batch13": {
+    "roadSurfaceOwnership": "Four verified local roads and two median crossing infills clipped to single surface ownership; road height and motion records unchanged",
+    "defaults": {
+      "roadSurfaceOwnership": true,
+      "roadPaintOffset": false,
+      "depth": "standard",
+      "shadows": "dynamic",
+      "roofs": "single-owner",
+      "treeLOD": "hysteresis"
+    },
+    "diagnostics": "Folded road single-owner/baseline selector alongside existing controls; camera/quality/pause preserved on reload",
+    "temporalFlickerFixed": false,
+    "actualWebGLAcceptance": false,
+    "sharedWholeCityIntegrated": false,
+    "CPUQA": {
+      "utc": "2026-10-17T11:31:28.042267+00:00",
+      "structuralAuditPassed": true,
+      "CPUImageReviewed": true,
+      "imageSHA256": "4b7752831d503a306d07d928ad6e211ec6c1bfc8d5a639672568d928e5739f54",
+      "sourceFreezeSHA256": "a8689603681f05dba10cfd98449f5fcd2419ab731054532d69d60c32630f40aa",
+      "unchangedOtherMeshes": 622,
+      "actualMergedJunctionOverlapBeforeM2": {
+        "roadRoad": 827.2916384347863,
+        "curbCurb": 2617.9244883371957,
+        "curbRoad": 9995.520775941828
+      },
+      "actualMergedJunctionOverlapAfterM2": {
+        "roadRoad": 0.00252488367324995,
+        "curbCurb": 6.0484553260728435e-05,
+        "curbRoad": 0.008866263100678421
+      },
+      "sourceRoadAndProfileRecordsUnchanged": true,
+      "completeMotionRecordsEqualAtSeconds": [
+        8,
+        30
+      ],
+      "CPUImageSize": [
+        800,
+        500
+      ],
+      "CPUImageSeconds": 24.69,
+      "offlineCPUPeakMiB": 983.41,
+      "releaseGeometryVersusTestedSource": "identical; only boolean default changed to enabled, explicit false retains baseline",
+      "roadPaintOffsetApplied": false,
+      "temporalFlickerValidated": false,
+      "allRoadsCovered": false,
+      "sharedWholeCityIntegrated": false
     }
   },
   "hostingNote": "Public navigation and release metadata adapted from the canonical source snapshot; source hashes describe that original snapshot."

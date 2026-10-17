@@ -4,7 +4,7 @@ export function readCbdRenderStability(search=''){
  const q=search instanceof URLSearchParams?search:new URLSearchParams(search);
  const depth=['standard','logarithmic','reversed'].includes(q.get('depth'))?q.get('depth'):'standard';
  const shadows=['dynamic','off','fixed'].includes(q.get('shadows'))?q.get('shadows'):'dynamic';
- return Object.freeze({depth,shadows,treeLodHysteresis:q.get('treeLod')==='baseline'?0:.12,roofSurfaceOwnership:q.get('roofs')!=='baseline',experimentalDepth:depth!=='standard',browserTemporalAcceptance:false});
+ return Object.freeze({depth,shadows,treeLodHysteresis:q.get('treeLod')==='baseline'?0:.12,roofSurfaceOwnership:q.get('roofs')!=='baseline',roadSurfaceOwnership:q.get('roads')!=='baseline',experimentalDepth:depth!=='standard',browserTemporalAcceptance:false});
 }
 export function cbdRendererDepthOptions(config){
  return {logarithmicDepthBuffer:config.depth==='logarithmic',reversedDepthBuffer:config.depth==='reversed'};

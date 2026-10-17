@@ -7,7 +7,7 @@ import * as THREE from '../vendor/three.module.js';
 import {project,BOUNDS,hash,rng,yieldFrame} from './geo.js';
 import {GeometryBatch,polygonGeometry,strip,colorArray} from './geometry.js';
 
-export async function buildTerrain(features,onProgress,{parkSurfaceOverrides}={}){
+export async function buildTerrain(features,onProgress,{parkSurfaceOverrides,roadSurfaceAppender=null}={}){
  const parkSurfaces=new Map((parkSurfaceOverrides?.features||[]).map(f=>[f.properties.sourceParkId||f.id,f.geometry]));const emptyParkSurfaces=new Set(parkSurfaceOverrides?.metadata?.emptySurfaceParkIds||[]);
  const root=new THREE.Group();root.name='Mapped city ground';
  const sw=project([BOUNDS[0],BOUNDS[1]]),ne=project([BOUNDS[2],BOUNDS[3]]);
@@ -25,8 +25,8 @@ export async function buildTerrain(features,onProgress,{parkSurfaceOverrides}={}
     const foot=p.shoreSharedPassage||['footway','path','pedestrian','steps','cycleway','living_street'].includes(p.class);
     const surfaceHeightAt=(x,z)=>elevationProfile?profileHeightAt(elevationProfile,x,z):p.customBridge==='wanning'?wanningDeckHeight(pts,x,z):p.heightProfile==='danbi'?.65+4*THREE.MathUtils.clamp((project([0,p.heightProfileSouth])[1]-z)/(project([0,p.heightProfileSouth])[1]-project([0,p.heightProfileNorth])[1]),0,1):y+((foot||p.drapeTerrain)?heightAt(x,z):0);
     const motorway=['motorway','trunk','motorway_link','trunk_link'].includes(p.class);
-    curbBatch.setSurfaceKind(4);if(!p.customBridge&&!p.customDrapedPath)strip(curbBatch,pts,width+(motorway?2.0:foot?.65:5.0),(x,z)=>surfaceHeightAt(x,z)-.12,colorArray(motorway?'#9b9e92':'#b4b4a4'));
-    roadBatch.setSurfaceKind(foot?2:1);if(!p.customBridge&&!p.customDrapedPath)strip(roadBatch,pts,width,surfaceHeightAt,colorArray(motorway?'#555f60':foot?'#a3aaa4':'#626b69'));
+    curbBatch.setSurfaceKind(4);if(!p.customBridge&&!p.customDrapedPath){const curbWidth=width+(motorway?2.0:foot?.65:5.0),curbY=(x,z)=>surfaceHeightAt(x,z)-.12,curbColor=colorArray(motorway?'#9b9e92':'#b4b4a4');if(!roadSurfaceAppender?.({batch:curbBatch,id:f.id,kind:'curb',points:pts,width:curbWidth,y:curbY,color:curbColor,elevationProfile}))strip(curbBatch,pts,curbWidth,curbY,curbColor);}
+    roadBatch.setSurfaceKind(foot?2:1);if(!p.customBridge&&!p.customDrapedPath){const roadColor=colorArray(motorway?'#555f60':foot?'#a3aaa4':'#626b69');if(!roadSurfaceAppender?.({batch:roadBatch,id:f.id,kind:'road',points:pts,width,y:surfaceHeightAt,color:roadColor,elevationProfile}))strip(roadBatch,pts,width,surfaceHeightAt,roadColor);}
     roads.push({id:f.id,name:p.name,points:pts,width,y,elevation,elevationProfile,surfaceHeightAt,class:p.class,oneway:p.oneway,properties:p});
    }
   }else if(p.kind==='water'||p.kind==='park'){
