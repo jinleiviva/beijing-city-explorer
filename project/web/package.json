@@ -1,0 +1,16 @@
+{
+  "name": "beijing-city-round2-yandai-pilot",
+  "version": "0.2.0-pilot",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "start": "python3 ../../scripts/serve_round2.py"
+  },
+  "dependencies": {},
+  "engines": {
+    "node": ">=20"
+  },
+  "vendored": {
+    "three": "0.186.0"
+  }
+}

@@ -1,0 +1,2 @@
+/** True single-tower footprint; local front+Z rotatesPI to geographic north. */
+export const BTV_SITE={"anchorWGS84":[116.46220632477622,39.90535654285234],"rotation":3.141592653589793,"osmId":"osm-way-220881238","points":[[29.659503557064234,34.08141367774874],[-30.56045004477537,33.279909677874],[-29.663811484174726,-34.079822322277096],[30.564681533232736,-33.278318322402356]],"architecturalHeight":239,"tipHeight":250};

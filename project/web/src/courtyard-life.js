@@ -1,0 +1,20 @@
+/** Explicitly inferred private planting and enclosed rear yards, never surveyed parcels. */
+import * as THREE from '../vendor/three.module.js';
+import {rng,hash,bounds} from './geo.js';
+import {roadIndex,nearRoad,insideBuilding,polygonIndex,inPolygons,SpatialGrid} from './spatial.js';
+import {Recipe} from './architecture/geometry.js';
+import {GeometryBatch,colorArray} from './geometry.js';
+export function planCourtyardLife(instances,heritage,terrain,buildingMask){
+ const roads=roadIndex(terrain.roads),water=polygonIndex(terrain.waters),planting=new SpatialGrid(8),extraTrees=[],yards=[];
+ const canPlant=(x,z,r=2)=>!insideBuilding(buildingMask,x,z,.3)&&!nearRoad(roads,x,z,.2)&&!inPolygons(water,x,z)&&!planting.nearby(x,z,4).some(t=>Math.hypot(x-t.x,z-t.z)<r+t.r);
+ const transform=(i,x,z)=>[i.x+x*Math.cos(i.rotation)+z*Math.sin(i.rotation),i.z-x*Math.sin(i.rotation)+z*Math.cos(i.rotation)];
+ for(const i of [...instances,...heritage.rearWings]){if(i.family!=='gray_tile_wing')continue;const random=rng(hash(i.id));for(const side of [-1,1]){if(random()<.24)continue;const[x,z]=transform(i,(random()-.5)*i.width*.8,side*(i.depth/2+2.4+random()*1.2)),r=2.1+random()*.8;if(!canPlant(x,z,r))continue;const t={x,z,r,h:5.8+random()*3.1,type:random()<.08?'pine':'broad',seed:random(),priority:true,privateYard:true};extraTrees.push(t);planting.insert(t,[x-r,z-r,x+r,z+r]);}}
+ for(const i of heritage.rearWings){const random=rng(hash(i.id)+51),w=i.width*.90,d=2.8+random()*1.1,offset=-i.depth/2-d/2-.08;const ring=[[-w/2,offset-d/2],[w/2,offset-d/2],[w/2,offset+d/2],[-w/2,offset+d/2]].map(([x,z])=>transform(i,x,z));if(ring.some(([x,z])=>insideBuilding(buildingMask,x,z,.06)||nearRoad(roads,x,z,-.3)||inPolygons(water,x,z)))continue;const[x,z]=transform(i,0,offset);yards.push({id:'yard-'+i.id,x,z,w,d,rotation:i.rotation,seed:hash(i.id),ring,props:random()>.30});}
+ return{extraTrees,yards,accuracy:'Inferred old-city courtyard planting and rear-yard walls constrained by mapped roads/water/buildings; no claim of individual surveyed parcels or trees'};
+}
+export function buildCourtyardLife(kit,plan,{onRecipe}={}){const root=new THREE.Group();root.name='Inferred rear courtyard enclosure and everyday details';const tiles=new Map();for(const yard of plan.yards){const key=`${Math.floor(yard.x/300)},${Math.floor(yard.z/300)}`;if(!tiles.has(key))tiles.set(key,[]);tiles.get(key).push(yard);}
+ for(const[key,yards]of tiles){const r=new Recipe('Inferred private rear courts'),ground=new GeometryBatch(),[tx,tz]=key.split(',').map(Number),ox=(tx+.5)*300,oz=(tz+.5)*300;
+  for(const y of yards){const local=new Recipe(y.id),random=rng(y.seed);for(const side of [-1,1]){local.box('greyBrick',side*y.w/2,1.39,0,.24,1.75,y.d,'rear court side wall');local.box('roofGreyRidge',side*y.w/2,2.32,0,.36,.15,y.d+.12,'coping on courtyard wall');}local.box('greyBrick',0,1.39,-y.d/2,y.w,1.75,.24,'rear courtyard enclosure');local.box('roofGreyRidge',0,2.32,-y.d/2,y.w+.18,.15,.36,'courtyard rear wall coping');if(y.props){for(let n=0;n<2+Math.floor(random()*3);n++){const x=-y.w*.35+n*.75;local.cylinder('brick',x,.85,-y.d*.33,.22,.5,'small terracotta courtyard pot',8,.75);local.sphere('foliage',x,1.22,-y.d*.33,.31,.35,.30,'courtyard potted shrub');}if(random()>.5){local.box('metal',y.w*.3,1.25,-y.d*.25,.7,.45,.32,'wall-mounted domestic equipment');local.box('metalDark',y.w*.3,1.25,-y.d*.25+.17,.53,.3,.025,'vent grille');}}
+   r.merge(local,[y.x-ox,0,y.z-oz],y.rotation);const pts=y.ring.map(p=>[p[0]-ox,.66,p[1]-oz]);ground.quad(pts[0],pts[3],pts[2],pts[1],colorArray(random()>.5?'#a4aaa3':'#939d96'));
+  }onRecipe?.({recipe:r,position:[ox,0,oz],accuracy:plan.accuracy});const near=kit.buildRecipe(r,{castShadow:true}),floor=ground.mesh(new THREE.MeshStandardMaterial({vertexColors:true,roughness:.98}));floor.receiveShadow=true;near.add(floor);const lod=new THREE.LOD();lod.position.set(ox,0,oz);lod.addLevel(near,0);lod.addLevel(new THREE.Group(),1000,.1);root.add(lod);
+ }root.userData={yards:plan.yards.length,trees:plan.extraTrees.length,accuracy:plan.accuracy};return root;}

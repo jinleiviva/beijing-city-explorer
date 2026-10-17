@@ -1,0 +1,13 @@
+{
+  "candidateBuild": "beijing-r2-cbd-candidate-10",
+  "candidateSourceTreeSHA256": "5ddaa0b428be329b1a7eea18f9a0b093f3fb68b6d73344632f682b6102518a21",
+  "scope": "owner-private independent CBD preview",
+  "rootEntry": "project/web/cbd-preview.html",
+  "runtimeCodeModifiedForHosting": false,
+  "omittedFromHost": [
+    "non-runtime Node test modules",
+    "historical reports",
+    "reference images and video"
+  ],
+  "visualAcceptance": "pending actual browser"
+}

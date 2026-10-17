@@ -1,0 +1,28 @@
+/** Reversible warm-grey / blue-grey study. Material-only: geometry and light unchanged. */
+import * as T from '../../../vendor/three.module.js';
+export const CBD_WARM_GREY_PALETTE=Object.freeze({stone:'#D4D0C7',glass:'#7898AC',glassDepth:'#405B6A',paving:'#B9BCB8',road:'#50565A',foliage:'#365F48',foliageLight:'#527852',terracotta:'#B95442',amber:'#D8A446'});
+const linear=h=>new T.Color(h),lum=c=>.2126*c[0]+.7152*c[1]+.0722*c[2];
+function attributedCopy(g,color){const n=new T.BufferGeometry();n.name=g.name+' · palette color view';n.setIndex(g.index);for(const [key,a]of Object.entries(g.attributes))n.setAttribute(key,key==='color'?color:a);for(const x of g.groups)n.addGroup(x.start,x.count,x.materialIndex);n.setDrawRange(g.drawRange.start,g.drawRange.count);n.boundingBox=g.boundingBox?.clone()||null;n.boundingSphere=g.boundingSphere?.clone()||null;n.userData={...g.userData,paletteOnlySharedPositions:true};return n;}
+export function applyCbdWarmGreyPalette(cbd){
+ if(cbd.colorVariant?.name==='warm-grey')return cbd.colorVariant;
+ const undo=[],clones=[],materials=new Map(),geometryViews=new Map(),report={name:'warm-grey',materialOnly:true,lightChanges:0,geometryPositionChanges:0,materialReferences:0,materialClones:0,vertexColorMeshes:0,instanceColorMeshes:0,extraColorBytes:0,palette:CBD_WARM_GREY_PALETTE,limitations:'Authored color study; source heights and geometry unchanged. Real browser environment/reflections remain unverified.'};
+ const materialColor=(m,color)=>{const key=m.uuid+'|'+color;if(materials.has(key))return materials.get(key);const n=m.clone();n.onBeforeCompile=m.onBeforeCompile;n.customProgramCacheKey=m.customProgramCacheKey;n.color.set(color);n.name=m.name+' · warm-grey';materials.set(key,n);clones.push(n);report.materialClones++;return n;};
+ const materialMap={posterCityField:'#B95442',posterLifeEditorial:'#D8A446',posterLifeTitle:'#F4E9D4',glass:'#7898AC',glassBlue:'#688C9F',glassPale:'#A8BBC2',glassDark:'#405B6A',zunGlass:'#8DA9B8',zunDark:'#405B6A',cctvGlass:'#91A7B2',cctvSteel:'#687E8B',glassMullion:'#B6C0C3',stone:'#C4C1BA',stoneLight:'#D4D0C7',stoneDark:'#A8AAA4',concrete:'#C0C3BF',silverFacade:'#C4CED0',paving:'#B9BCB8',grass:'#718B6F',foliage:'#527852',awning:'#B95442',vermilion:'#B95442'};
+ const inGroup=(o,g)=>{for(let p=o;p;p=p.parent)if(p===g)return true;return false;};
+ function recolorAttribute(o,kind,choose){const source=o.geometry.getAttribute('color');if(!source)return;const key=o.geometry.uuid+'|'+kind;let view=geometryViews.get(key);if(!view){const out=source.clone(),means=new Map();for(let i=0;i<source.count;i++){const k=choose(i,true),c=[source.getX(i),source.getY(i),source.getZ(i)],x=means.get(k)||[0,0];x[0]+=lum(c);x[1]++;means.set(k,x);}for(let i=0;i<source.count;i++){const k=choose(i,true),target=choose(i,false);if(!target)continue;const c=linear(target),old=[source.getX(i),source.getY(i),source.getZ(i)],m=means.get(k),ratio=T.MathUtils.clamp(lum(old)/(m[0]/m[1]||1),.86,1.14);c.multiplyScalar(ratio);out.setXYZ(i,c.r,c.g,c.b);}view=attributedCopy(o.geometry,out);geometryViews.set(key,view);report.extraColorBytes+=out.array.byteLength;}const old=o.geometry;undo.push(()=>o.geometry=old);o.geometry=view;report.vertexColorMeshes++;}
+ cbd.root.traverse(o=>{if(!o.isMesh)return;
+  const original=o.material,list=Array.isArray(original)?original:[original];let changed=false;
+  const newList=list.map(m=>{const n=m.name?.replace(/^Beijing_/,'');let c=materialMap[n];
+   if(inGroup(o,cbd.commercialPosters?.standard)||inGroup(o,cbd.commercialPosters?.low)){c=({greenBeam:'#45695A',cctvSteel:'#748F9E',vermilion:'#B95442',bronze:'#D8A446',marble:'#E1DED4',signDark:'#334650'})[n]||c;}
+   if(!c)return m;changed=true;report.materialReferences++;return materialColor(m,c);
+  });if(changed){undo.push(()=>o.material=original);o.material=Array.isArray(original)?newList:newList[0];}
+  if(inGroup(o,cbd.context)){const kinds=o.geometry.getAttribute('surfaceKind'),norm=o.geometry.getAttribute('normal');recolorAttribute(o,'context', (i,key)=>{const k=norm?.getY(i)>.5?'roof':Math.round(kinds?.getX(i)||5);return key?k:({roof:'#9AA2A3',4:'#94AAB5',5:'#C8C5BE',6:'#C8C3B8',7:'#D0CDC4'})[k]||'#C8C5BE';});}
+  if(inGroup(o,cbd.landscape)){
+   if(o.instanceColor){const old=o.instanceColor,out=old.clone(),mean=Array.from({length:old.count},(_,i)=>lum([old.getX(i),old.getY(i),old.getZ(i)])).reduce((a,b)=>a+b,0)/Math.max(1,old.count);for(let i=0;i<old.count;i++){const l=lum([old.getX(i),old.getY(i),old.getZ(i)]),c=linear(l>=mean?CBD_WARM_GREY_PALETTE.foliageLight:CBD_WARM_GREY_PALETTE.foliage).multiplyScalar(T.MathUtils.clamp(l/(mean||1),.9,1.1));out.setXYZ(i,c.r,c.g,c.b);}undo.push(()=>o.instanceColor=old);o.instanceColor=out;report.extraColorBytes+=out.array.byteLength;report.instanceColorMeshes++;}
+   else if(/leaf sprays|folded foliage/.test(o.name)){recolorAttribute(o,'foliage',(i,key)=>key?'leaf':CBD_WARM_GREY_PALETTE.foliageLight);}
+  }
+  if(inGroup(o,cbd.terrain.group)&&o.name.startsWith('ground ')){const sk=o.geometry.getAttribute('surfaceKind');recolorAttribute(o,'terrain',(i,key)=>{const k=Math.round(sk?.getX(i)||0);return key?k:({1:CBD_WARM_GREY_PALETTE.road,2:CBD_WARM_GREY_PALETTE.paving,3:'#789273',4:'#B3B9B5'})[k]||null;});}
+  if(o.name==='mapped land-use')recolorAttribute(o,'landuse',(i,key)=>key?'land':CBD_WARM_GREY_PALETTE.paving);
+ });
+ const state={name:'warm-grey',report,restore(){for(let i=undo.length-1;i>=0;i--)undo[i]();for(const m of clones)m.dispose();for(const g of geometryViews.values())g.dispose();delete cbd.colorVariant;cbd.metadata.colorVariant={name:'baseline',restored:true};}};cbd.colorVariant=state;cbd.metadata.colorVariant=report;return state;
+}

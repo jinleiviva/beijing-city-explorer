@@ -1,0 +1,2 @@
+/** Preserve evidence ranges; the chosen midpoint is a modelling assumption. */
+export function applyContextOverrides(features,document){let changed=0;for(const f of features){const v=document.overrides?.[f.id];if(!v)continue;const range=v.heightRangeMetres||v.podiumHeightRangeMetres;const height=range?(range[0]+range[1])/2:Math.min(24,Math.max(12,Number(f.properties.height)||18));f.properties={...f.properties,height,heightSource:'photo-reference approximate massing; see cbd-context-height-overrides.json',contextOverride:v.name,contextRole:v.role};changed++;}return changed;}
