@@ -1,7 +1,7 @@
 {
-  "buildID": "beijing-r2-cbd-candidate-11",
-  "utc": "2026-10-17T10:34:27.433075+00:00",
-  "status": "candidate11_CPU_reviewed_bounded_massing_street_life_and_ads_WebGL_pending",
+  "buildID": "beijing-r2-cbd-candidate-12-roof-stability",
+  "utc": "2026-10-17T11:00:15.606667+00:00",
+  "status": "candidate12_targeted_roof_surface_repair_CPU_image_reviewed_diagnostic_UI_WebGL_temporal_pending",
   "scope": "Independent CBD candidate; previous Yandai sample retained, no propagation",
   "baselineRuntimeSHA256": "d88c7e45c6ba3f023edcc5624f2853a5229e9dd17c3bd544b984260fe4100e47",
   "dataSHA256": "9ec30d8046fc47dda47608020b9c98367e242bf5ca75e12dba057e2ee8e186a5",
@@ -22,10 +22,10 @@
     "flickerFixClaimed": false,
     "realCompanyEmblemCount": 0
   },
-  "sourceTreeSHA256": "d416d5a73d30dd2b180dfba624c71b3115c1ef38c715eb09b6f0e34fe3255a2a",
+  "sourceTreeSHA256": "f563e32b9ba8a26e7eb023612fe1081ecd48759df1dc0c9b187c7f295e7e8846",
   "webSourceHashes": {
-    "cbd-preview.css": "0cb80e7ab344f1b0431364f8709f0639475bff9ae73eecf8ce17eaf907094da0",
-    "cbd-preview.html": "97d9aee592b35d2bc1e09c9968157d0be72cd088282686d2f1e77ad323cc02c2",
+    "cbd-preview.css": "78b46605916188d6c6de731d29ccf78177231dddf58f6c6c23f51fe54fbe8ddc",
+    "cbd-preview.html": "d6e2ebad05b596b302ee8cb0cd68f1ae172268b90da894ffc60d382df8d19066",
     "data/cbd-scene.json": "9ec30d8046fc47dda47608020b9c98367e242bf5ca75e12dba057e2ee8e186a5",
     "index.html": "c754e6ba2198fe3e078ab2d0866121f38dfcf7c6f286851a4dc082c056b5db84",
     "package.json": "a97b81bcc4659f5f3ea1b2bdf4fbad85dc74bb15fdf7b0818e1bf3423d945d57",
@@ -123,7 +123,7 @@
     "src/infill-constraints.js": "a4152b714c86ac35f28685acfd1a9480280f02cfaac00b0accdf01f80eb908cb",
     "src/infill.js": "ccc02e3ca646eb68b88233a714155fc5f52469eab557e5d7a51102681b4a4271",
     "src/landmark-picking.js": "e0db3b54c0a5d2004e1aa7961682cb69d4c0c9cb2932c545bb8ae273aecdf7f9",
-    "src/landscape.js": "85baa1c0ce647460f0363cafbd5cc4a42545b83435d9bfb87a0da0769d40ffe7",
+    "src/landscape.js": "4e923abd18386fbe693182074ac0884b3c8b19af8ec0484a6713a892c07dda8c",
     "src/main.js": "bb560eb995db07bed72e8ac924a54be176e6af054fdd49196bc12a07a5ac7b0f",
     "src/neighborhood-lod.js": "4cf28155be05dde81c7671b4541317fa1c302f3f786aac00d5fef1d94f81c69a",
     "src/oldtown-frontages.js": "48de7cce4fe00718d4d48f02ab5644914c3592c38bcb6f1b60c57b2f9b674803",
@@ -149,7 +149,7 @@
     "src/round2/cbd-facade-identities/index.js": "65e1db50b7bb25ed8358abcba6cce852569f1011e08d639cae4e4c81a68114b9",
     "src/round2/cbd-forecourt-route/index.js": "a3601a91eccd89f844858911379afd0b030dca00ffecefba1b3ab76db66e3896",
     "src/round2/cbd-frontages/index.js": "6841e66e9da852230447f5f69e9e725acde63612feae349a216ad943de020fd6",
-    "src/round2/cbd-main.js": "9cecc986cdc3f51ec1c09b506d98ea4ef2f5a047efe37bdddbc87bc4201fe742",
+    "src/round2/cbd-main.js": "edcc3fdd62884cb01edf2c11f2b4c973d31b97e31b067999d542f6c72d15d438",
     "src/round2/cbd-major-facades/index.js": "1ca32cd54c47dcde7e5bd0e98759d50c8bc9a9a0f579bc127faa1b9198367001",
     "src/round2/cbd-mall-corner/FONT_LICENSE.txt": "65e784704b9bf8bf4cf86aff1b91830ec164387c7af0a6a52343b2945ffa93de",
     "src/round2/cbd-mall-corner/canopy-volume.js": "064b067e66aa2a309d5df38bd510091a5e90278c2e78110602bb0722ca2a0489",
@@ -173,10 +173,13 @@
     "src/round2/cbd-photo-street/glyph-data.js": "ac372847d83007ad97e800ea91c3668e0e5e23b3c1bfa51b917ea88c936d0880",
     "src/round2/cbd-photo-street/index.js": "268ccf748b95abdc3cb644842daea7d12d09f4c45bf52ce5c184b6741d91104a",
     "src/round2/cbd-photo-street/lettering.js": "edfef48d1a8447d6c00a2392aebd7b20b04fd63fa073ae0c88a09cf2e5cf68ee",
+    "src/round2/cbd-render-stability/index.js": "a43735d1d59a2a54164dcd0360b2262dfbad020e2e3b8608d80777406bd5b283",
+    "src/round2/cbd-render-stability/ui.js": "43460f4995476bd323578e08bff0246011d5127811236983ee1cbb160b2a1a1c",
     "src/round2/cbd-roof-details/FONT_LICENSE.txt": "65e784704b9bf8bf4cf86aff1b91830ec164387c7af0a6a52343b2945ffa93de",
     "src/round2/cbd-roof-details/glyph-data.js": "79855023d20b698007ab9731d5e99851079aa2f1a4246df8e09a56adfaca18ef",
     "src/round2/cbd-roof-details/index.js": "3a588421d381c18626035b475e07393ed3507b2d1054c4afb79708a23008adbf",
-    "src/round2/cbd-scene.js": "d6c4d87ab41c72680383875b5c73b79b60f48b673a2d3388082d44921ab4d9a5",
+    "src/round2/cbd-roof-surface-ownership/index.js": "c33f4da67b35c6b8379f48ab34561de74e5a78cc5bc04fef68f2404f266b4d7c",
+    "src/round2/cbd-scene.js": "fa23648bb7a35a102a9bc533b12dec33b2f508982872bf4f6bd2e35880441a9b",
     "src/round2/cbd-second-identities/FONT_LICENSE.txt": "65e784704b9bf8bf4cf86aff1b91830ec164387c7af0a6a52343b2945ffa93de",
     "src/round2/cbd-second-identities/glyph-data.js": "058550b5e801a72f130370e4bfe37318c7ee6806da0550a8084a9f47f001fb87",
     "src/round2/cbd-second-identities/index.js": "6ac1c7e502ac82671212c96f8ce581468910692f76edd94678531635d4d0c8ad",
@@ -212,6 +215,43 @@
     "vendor/THREE-LICENSE.txt": "8b378ebe60e2fe500158cb0ac71cb5e8b7d92953c2abcc63a0eb90499653b5bc",
     "vendor/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
     "vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
+  },
+  "candidate": 12,
+  "batch12": {
+    "roofSurfaceOwnership": "Exact covered upward cap portions removed, facade/footprint/building height retained; B silver cap changed to same-size perimeter bars",
+    "treeLOD": "CBD-only .12 hysteresis; global-city legacy tree policy unchanged",
+    "defaults": {
+      "depth": "standard",
+      "shadows": "dynamic",
+      "roofs": "single-owner",
+      "treeLOD": "hysteresis"
+    },
+    "diagnostics": "Folded same-page selector; current camera/quality/pause preserved across reload; traffic time restarts",
+    "roadGeometryChanged": false,
+    "temporalFlickerFixed": false,
+    "actualWebGLAcceptance": false,
+    "sharedWholeCityIntegrated": false,
+    "CPUQA": {
+      "utc": "2026-10-17T11:00:15.557532+00:00",
+      "structuralAuditPassed": true,
+      "CPUImageReviewed": true,
+      "CPUImage": "cbd-candidate12-roof-v1-cpu.png",
+      "CPUImageSHA256": "53ac5349363c916909e7136cf35b0cca5f9b4de648746c2cb6bfebd80431e21b",
+      "imageReview": "B crown dark roof is continuous inside the open frame; no visible missing roof or old pale full cap. One static CPU image, with approximate lighting/shaders.",
+      "testedArchitectureBatches": 107,
+      "horizontalCoplanarTrianglePairsBefore": 8910,
+      "horizontalCoplanarTrianglePairsAfter": 623,
+      "targetGlassToDarkRoofCoplanarPairsAfter": 0,
+      "BTopDownRays": 49,
+      "roofRecipeVariants": 15,
+      "temporalFlickerFixed": false,
+      "remainingRisks": [
+        "Other same-material and hidden coplanar geometry remains",
+        "Near-separated rooftop paint and road paint remain",
+        "Conventional depth precision and shadows need live WebGL A/B",
+        "CPU image does not establish temporal stability"
+      ]
+    }
   },
   "hostingNote": "Public navigation and release metadata adapted from the canonical source snapshot; source hashes describe that original snapshot."
 }

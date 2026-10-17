@@ -1,8 +1,7 @@
 {
-  "candidateBuild": "beijing-r2-cbd-candidate-11",
-  "candidateSourceTreeSHA256": "d416d5a73d30dd2b180dfba624c71b3115c1ef38c715eb09b6f0e34fe3255a2a",
-  "scope": "public independent CBD preview; panorama retains its previous CBD implementation",
+  "candidateBuild": "beijing-r2-cbd-candidate-12-roof-stability",
+  "candidateSourceTreeSHA256": "f563e32b9ba8a26e7eb023612fe1081ecd48759df1dc0c9b187c7f295e7e8846",
+  "scope": "public independent CBD targeted roof repair and diagnostic controls; panorama retains its previous CBD implementation",
   "rootEntry": "index.html",
-  "runtimeCodeModifiedForHosting": false,
-  "visualAcceptance": "CPU source geometry reviewed; original WebGL pending"
+  "visualAcceptance": "Source geometry CPU image and structural checks; temporal WebGL flicker remains unverified"
 }

@@ -1,3 +1,4 @@
+import {prepareRoofSurfaceOwnership} from './cbd-roof-surface-ownership/index.js';
 import {attachTrafficDetail} from './cbd-people-vehicle-detail/index.js';
 import {buildCommercialVariety} from './cbd-commercial-variety/index.js';
 import {buildCbdTaikangCorrection,TAIKANG_ID,TAIKANG_HEIGHT} from './cbd-taikang-correction/index.js';
@@ -84,10 +85,10 @@ export async function buildCbdScene(data,progress=()=>{},options={}){
  ensureSecondIdentityHostMaterials(kit);
  const entryGround=makeMallSurfaceSampler([terrain.group,urbanContext]);
  const architecture=new THREE.Group();architecture.name='Mapped CBD architecture';
- for(const f of data.landmarks){const id=f.properties.model||f.id,model=kit.buildMergedRecipe(landmarkRecipe(id,{detail:1}));const [x,z]=project(f.geometry.coordinates);model.position.set(x,f.properties.baseElevation||1,z);model.rotation.y=f.properties.rotation||0;model.name=f.properties.name;model.userData.sourceFeature=f;architecture.add(model);}
+ for(const f of data.landmarks){const id=f.properties.model||f.id,model=kit.buildMergedRecipe(prepareRoofSurfaceOwnership(landmarkRecipe(id,{detail:1}),{enabled:options.roofSurfaceOwnership!==false}));const [x,z]=project(f.geometry.coordinates);model.position.set(x,f.properties.baseElevation||1,z);model.rotation.y=f.properties.rotation||0;model.name=f.properties.name;model.userData.sourceFeature=f;architecture.add(model);}
  for(const site of data.sites){const recipe=buildingRecipe(site.family,{detail:1});const model=kit.buildMergedRecipe(site.family==='cwtc_mall_north'?prepareMallCornerHost(recipe):site.family==='hanwei_plaza'?prepareHanweiGroundHost(recipe,{groundAt:entryGround}):recipe);const [x,z]=project(site.anchorWGS84);model.position.set(x,.8,z);model.userData.sourceSite=site;architecture.add(model);}
  const richRecipe=new Recipe('Preserved nearby CBD building families');
- for(const i of data.rich.filter(i=>!taikangEnabled||i.id!==TAIKANG_ID))richRecipe.merge(prepareSecondIdentityHost(i,prepareIdentityTowerHost(i,buildingRecipe(i.family,{...i,detail:1}))),[i.x,i.y||0,i.z],i.rotation||0);
+ for(const i of data.rich.filter(i=>!taikangEnabled||i.id!==TAIKANG_ID))richRecipe.merge(prepareRoofSurfaceOwnership(prepareSecondIdentityHost(i,prepareIdentityTowerHost(i,buildingRecipe(i.family,{...i,detail:1}))),{enabled:options.roofSurfaceOwnership!==false}),[i.x,i.y||0,i.z],i.rotation||0);
  architecture.add(kit.buildMergedRecipe(richRecipe));root.add(architecture);
  const roofDetails=buildCbdRoofDetails(kit,data);root.add(roofDetails);
  const frontageGroup=new THREE.Group();frontageGroup.name='Mapped first-floor and layered planting candidates';
@@ -112,7 +113,7 @@ export async function buildCbdScene(data,progress=()=>{},options={}){
  progress('建立路缘、树冠与道路设施');
  const collision=buildingIndex(data.collisionBuildings);
  const mallPlazaStd=buildMallPlaza(kit,terrain.roads,collision,{quality:'std'}),mallPlazaLow=buildMallPlaza(kit,terrain.roads,collision,{quality:'low'});frontageStd.add(mallPlazaStd);frontageLow.add(mallPlazaLow);
- const landscape=await buildLandscape(terrain.roads,terrain.parks,{maxTrees:1600,buildingMask:collision,waters:terrain.waters,styleOverrides:data.streetStyles.overrides,midTreeZones:[{minX:4740,maxX:4880,z:-384,halfDepth:27,count:16}],heroTreeLimit:20,heroTreeRecords:MALL_VISIBLE_TREE_RECORDS,heroTreeZones:[{x:4701.2,z:-396.826,radius:85,count:4,forward:[75,21]},{x:5298.927,z:-417.618,radius:100,count:4,forward:[75,31]},{x:4655,z:-350,radius:85,count:4,forward:[1,0]}]});root.add(landscape);
+ const landscape=await buildLandscape(terrain.roads,terrain.parks,{maxTrees:1600,initializeLodVisibility:true,lodHysteresis:options.treeLodHysteresis??.12,buildingMask:collision,waters:terrain.waters,styleOverrides:data.streetStyles.overrides,midTreeZones:[{minX:4740,maxX:4880,z:-384,halfDepth:27,count:16}],heroTreeLimit:20,heroTreeRecords:MALL_VISIBLE_TREE_RECORDS,heroTreeZones:[{x:4701.2,z:-396.826,radius:85,count:4,forward:[75,21]},{x:5298.927,z:-417.618,radius:100,count:4,forward:[75,31]},{x:4655,z:-350,radius:85,count:4,forward:[1,0]}]});root.add(landscape);
  const streetDetailGroup=new THREE.Group();streetDetailGroup.name='Guanghua visible street detail quality levels';const streetDetailStd=buildCbdStreetDetail(kit,terrain.roads,landscape.userData.round2HeroSourceRecords,collision,{quality:'std'}),streetDetailLow=buildCbdStreetDetail(kit,terrain.roads,landscape.userData.round2HeroSourceRecords,collision,{quality:'low'});streetDetailLow.visible=false;streetDetailGroup.add(streetDetailStd,streetDetailLow);root.add(streetDetailGroup);
  const junctionLayout=mallJunctionLayout(terrain.roads),mallLampDetail=createMallLampDetail(),streetscape=buildStreetscape(terrain.roads,data.streetCatalog,{styleOverrides:data.streetStyles.overrides,localRoadCuts:junctionLayout.localRoadCuts,lampDetail:mallLampDetail.replace});root.add(streetscape.group);
  const mallStreetLamps=mallLampDetail.build(kit,makeMallSurfaceSampler([terrain.group,urbanContext,streetscape.group]));root.add(mallStreetLamps);

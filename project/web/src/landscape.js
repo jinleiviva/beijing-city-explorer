@@ -5,7 +5,8 @@ import * as THREE from '../vendor/three.module.js';
 import {bounds,pointInRing,hash,rng,yieldFrame} from './geo.js';
 import {insideBuilding,polygonIndex,inPolygons,roadIndex,nearRoad} from './spatial.js';
 
-export async function buildLandscape(roads,parks,{maxTrees=46000,buildingMask=null,waters=[],heightAt=()=>0,extraTrees=[],styleOverrides={},detailZones=[],plantingExclusions=[],canopyZones=null,heroTreeSelector=null,heroTreeZones=[],heroTreeLimit=8,heroTreeRecords=[],midTreeZones=[]}={}){
+export async function buildLandscape(roads,parks,{maxTrees=46000,buildingMask=null,waters=[],heightAt=()=>0,extraTrees=[],styleOverrides={},detailZones=[],plantingExclusions=[],canopyZones=null,heroTreeSelector=null,heroTreeZones=[],heroTreeLimit=8,heroTreeRecords=[],midTreeZones=[],lodHysteresis=0,initializeLodVisibility=false}={}){
+ if(!Number.isFinite(lodHysteresis)||lodHysteresis<0||lodHysteresis>.3)throw new RangeError('Tree LOD hysteresis must be between 0 and .3');
  const group=new THREE.Group();group.name='Procedural urban planting on mapped streets and parks';
  const heroCollections=[],heroSourceRecords=[],midCollections=[],midSourceRecords=[],heroRecordOverrides=new Map();
  let isRound2Hero=t=>Math.hypot(t.x+819.1046059869,t.z+3264.0328898391513)<.05;
@@ -90,9 +91,9 @@ export async function buildLandscape(roads,parks,{maxTrees=46000,buildingMask=nu
  const regions=new Map();for(const tile of tiles.values()){const rx=Math.floor(tile.x/1600),rz=Math.floor(tile.z/1600),key=`${rx},${rz}`;if(!regions.has(key))regions.set(key,{x:(rx+.5)*1600,z:(rz+.5)*1600,tiles:[],trees:[]});const region=regions.get(key);region.tiles.push(tile);region.trees.push(...tile.trees);}
  for(const region of regions.values()){
   const regionalLod=new THREE.LOD();regionalLod.position.set(region.x,0,region.z);const near=new THREE.Group();
-  for(const tile of region.tiles){const lod=new THREE.LOD();lod.position.set(tile.x-region.x,0,tile.z-region.z);lod.addLevel(level(tile,0),0);lod.addLevel(level(tile,1),750);near.add(lod);}
-  regionalLod.addLevel(near,0);regionalLod.addLevel(level(region,2),3500,.12);group.add(regionalLod);
+  for(const tile of region.tiles){const lod=new THREE.LOD();lod.position.set(tile.x-region.x,0,tile.z-region.z);lod.addLevel(level(tile,0),0);const farLevel=level(tile,1);if(initializeLodVisibility)farLevel.visible=false;lod.addLevel(farLevel,750,lodHysteresis);near.add(lod);}
+  regionalLod.addLevel(near,0);const regionalFar=level(region,2);if(initializeLodVisibility)regionalFar.visible=false;regionalLod.addLevel(regionalFar,3500,.12);group.add(regionalLod);
  }
- group.userData={round2HeroTreeCount:heroSourceRecords.length,round2HeroSourceRecords:heroSourceRecords,round2HeroStats:heroCollections.map(c=>({standard:c.standard.stats,low:c.low.stats})),round2MidTreeCount:midSourceRecords.length,round2MidSourceRecords:midSourceRecords,round2MidStats:midCollections.map(c=>({standard:c.standard.userData,low:c.low.userData})),setQuality:q=>{heroCollections.forEach(c=>{c.standard.group.visible=q!=='low';c.low.group.visible=q==='low';});midCollections.forEach(c=>{c.standard.visible=q!=='low';c.low.visible=q==='low';});},trees:trees.length,placementGuard:finalGroundGuard.audit,canopyZones:canopyZones?.zones||[],localCanopyTrees:localCanopy.length,baseTreeBudget:maxTrees,additiveTrees:filteredExtra.length,tiles:tiles.size,regions:regions.size,lodDistances:[0,750,3500],accuracy:'Procedural streetside and park planting; individual trees are not surveyed'};
+ group.userData={round2HeroTreeCount:heroSourceRecords.length,round2HeroSourceRecords:heroSourceRecords,round2HeroStats:heroCollections.map(c=>({standard:c.standard.stats,low:c.low.stats})),round2MidTreeCount:midSourceRecords.length,round2MidSourceRecords:midSourceRecords,round2MidStats:midCollections.map(c=>({standard:c.standard.userData,low:c.low.userData})),setQuality:q=>{heroCollections.forEach(c=>{c.standard.group.visible=q!=='low';c.low.group.visible=q==='low';});midCollections.forEach(c=>{c.standard.visible=q!=='low';c.low.visible=q==='low';});},trees:trees.length,placementGuard:finalGroundGuard.audit,canopyZones:canopyZones?.zones||[],localCanopyTrees:localCanopy.length,baseTreeBudget:maxTrees,additiveTrees:filteredExtra.length,tiles:tiles.size,regions:regions.size,lodDistances:[0,750,3500],lodHysteresis:{inner:lodHysteresis,outer:.12},accuracy:'Procedural streetside and park planting; individual trees are not surveyed'};
  return group;
 }
