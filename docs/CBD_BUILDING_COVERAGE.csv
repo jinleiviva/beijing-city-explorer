@@ -1,0 +1,201 @@
+﻿足迹ID,原地图名称,本轮已跟踪几何增量,几何类别,有据楼名文字,楼名公开图证,原创示意商铺招牌,原创小海报数,原创大广告数,有据停机坪,当前文字像素限制,原地图高度米,原地图高度说明,地图来源
+osm-relation-3144288,建国宾馆,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/relation/3144288
+osm-relation-7820447,中央电视台总部大楼,True,主要楼首层/入口或玻璃细分,,,,0,0,False,无本批有据楼名,245,OSM height tag,https://www.openstreetmap.org/relation/7820447
+osm-way-33459419,中国大饭店,True,首批有据楼名/入口修正,中国大饭店 China World Hotel / 中国大饭店,https://www.shangri-la.com/cn/beijing/chinaworld/about/map-directions/,,0,0,False,已按专用CPU近景核挂装；方向/尺寸仍推断，原WebGL未验,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/33459419
+osm-way-33459526,,False,,,,,0,0,False,无本批有据楼名,155,OSM height tag,https://www.openstreetmap.org/way/33459526
+osm-way-33459557,China World Apartments South Lodge,False,,,,,0,0,False,无本批有据楼名,66,approximate from levels × 3.3m,https://www.openstreetmap.org/way/33459557
+osm-way-116939989,北京财富中心写字楼A座,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/116939989
+osm-way-116939990,财富中心公寓翼楼,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/116939990
+osm-way-116944475,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/116944475
+osm-way-116944484,世贸国际公寓,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/116944484
+osm-way-116944487,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/116944487
+osm-way-116944489,汉威大厦,True,主要楼首层/入口或玻璃细分；首批有据楼名/入口修正,漢威大廈 / HANWEI PLAZA,https://www.hanweidasha.cn/,,0,0,False,已按专用CPU近景核挂装；方向/尺寸仍推断，原WebGL未验,32.5,photo-reference approximate massing; see cbd-context-height-overrides.json,https://www.openstreetmap.org/way/116944489
+osm-way-116944490,中国国际贸易中心三期A座,True,主要楼首层/入口或玻璃细分,,,,0,0,False,无本批有据楼名,330,OSM height tag,https://www.openstreetmap.org/way/116944490
+osm-way-116944493,Prosper Center,False,,,,,0,0,False,无本批有据楼名,87.5,photo-reference approximate massing; see cbd-context-height-overrides.json,https://www.openstreetmap.org/way/116944493
+osm-way-116944495,中央电视台电视文化中心,True,主要楼首层/入口或玻璃细分,,,,0,0,False,无本批有据楼名,6.6,approximate from levels × 3.3m,https://www.openstreetmap.org/way/116944495
+osm-way-117559455,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/117559455
+osm-way-117559456,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/117559456
+osm-way-117559458,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/117559458
+osm-way-117559459,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/117559459
+osm-way-117561198,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/117561198
+osm-way-117561222,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/117561222
+osm-way-156061534,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/156061534
+osm-way-156061546,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/156061546
+osm-way-156061553,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/156061553
+osm-way-156061560,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,12,photo-reference approximate massing; see cbd-context-height-overrides.json,https://www.openstreetmap.org/way/156061560
+osm-way-156061567,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/156061567
+osm-way-156297766,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/156297766
+osm-way-156297774,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/156297774
+osm-way-156297782,嘉里商场,True,主要楼首层/入口或玻璃细分,KERRY / HOTEL / 嘉里大酒店,https://item.secoo.com/10945351.shtml,,0,0,False,已按专用CPU近景核挂装；方向/尺寸仍推断，原WebGL未验,18,photo-reference approximate massing; see cbd-context-height-overrides.json,https://www.openstreetmap.org/way/156297782
+osm-way-156297794,财富购物中心,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/156297794
+osm-way-156297803,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/156297803
+osm-way-156298332,富尔大厦,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/156298332
+osm-way-233497497,中服大厦,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/233497497
+osm-way-233513044,东亚银行大厦,True,首批有据楼名/入口修正,BEA 東亞銀行 / BEA,https://www.mfgchn.com/office/beijing/bpc/,,0,0,False,已按专用CPU近景核挂装；方向/尺寸仍推断，原WebGL未验,105,photo-reference approximate massing; see cbd-context-height-overrides.json,https://www.openstreetmap.org/way/233513044
+osm-way-233513045,世纪财富中心,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,23.5,photo-reference approximate massing; see cbd-context-height-overrides.json,https://www.openstreetmap.org/way/233513045
+osm-way-233513047,Etonkids,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/233513047
+osm-way-233513048,韩国文化院,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/233513048
+osm-way-233523265,北京京伦饭店,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,39.599999999999994,approximate from levels × 3.3m,https://www.openstreetmap.org/way/233523265
+osm-way-233523268,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/233523268
+osm-way-233523270,中国大厦,False,,,,,0,0,False,无本批有据楼名,155,OSM height tag,https://www.openstreetmap.org/way/233523270
+osm-way-233523272,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/233523272
+osm-way-233523277,China World Apartments North Lodge,False,,,,,0,0,False,无本批有据楼名,66,approximate from levels × 3.3m,https://www.openstreetmap.org/way/233523277
+osm-way-241504665,北京嘉里中心北楼,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/241504665
+osm-way-241504700,北京嘉里中心南楼,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/241504700
+osm-way-295949274,万达广场CBD店,False,,,,,0,0,False,无本批有据楼名,150,OSM height tag,https://www.openstreetmap.org/way/295949274
+osm-way-297809771,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/297809771
+osm-way-297809775,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/297809775
+osm-way-297810113,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/297810113
+osm-way-297810114,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/297810114
+osm-way-297810115,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/297810115
+osm-way-297810116,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/297810116
+osm-way-297810117,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/297810117
+osm-way-297810118,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/297810118
+osm-way-297810119,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/297810119
+osm-way-338084085,北京千禧大酒店,True,104m估值形体及楼名,GRAND / MILLENNIUM,https://www.millenniumhotels.com/zh/destinations/asia/china/beijing/grand-millennium-beijing/,,0,0,False,已按专用CPU近景核挂装；方向/尺寸仍推断，原WebGL未验；整楼图GRAND太小，104m为外部估值,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/338084085
+osm-way-338084354,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,18,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/338084354
+osm-way-338085198,财富金融中心（北京财富中心三期）,True,首批有据楼名/入口修正,FFC,https://www.hki.com.cn/company-business/commercial-operations.html,,0,0,False,已按专用CPU近景核挂装；方向/尺寸仍推断，原WebGL未验；FFC在当前远机位偏小,265,OSM height tag,https://www.openstreetmap.org/way/338085198
+osm-way-338147228,北京财富中心写字楼A座,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/338147228
+osm-way-345716071,中央电视台服务楼,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,12,OSM estimated height tag,https://www.openstreetmap.org/way/345716071
+osm-way-352736794,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/352736794
+osm-way-352737417,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,18,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/352737417
+osm-way-352737418,,False,,,,,0,0,False,无本批有据楼名,18,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/352737418
+osm-way-371402227,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,16.5,approximate from levels × 3.3m,https://www.openstreetmap.org/way/371402227
+osm-way-479407952,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/479407952
+osm-way-481646089,,False,,,,,0,0,False,无本批有据楼名,128,OSM height tag,https://www.openstreetmap.org/way/481646089
+osm-way-481646090,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,16.5,approximate from levels × 3.3m,https://www.openstreetmap.org/way/481646090
+osm-way-481646094,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,6.6,approximate from levels × 3.3m,https://www.openstreetmap.org/way/481646094
+osm-way-481646096,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/481646096
+osm-way-481646097,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/481646097
+osm-way-481646098,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/481646098
+osm-way-481646100,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/481646100
+osm-way-481646101,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/481646101
+osm-way-481646110,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/481646110
+osm-way-481646111,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/481646111
+osm-way-481646112,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/481646112
+osm-way-481646113,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/481646113
+osm-way-481646114,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/481646114
+osm-way-481646115,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/481646115
+osm-way-481646117,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/481646117
+osm-way-481646118,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/481646118
+osm-way-481646121,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/481646121
+osm-way-481646122,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/481646122
+osm-way-481646124,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,16.5,approximate from levels × 3.3m,https://www.openstreetmap.org/way/481646124
+osm-way-599547915,世界华商中心,True,第二批有据楼名,世界华商中心 / CM CENTER,https://www.cp-center.cn/news-detail/1757.html,,0,0,False,已按专用CPU近景核挂装；方向/尺寸仍推断，原WebGL未验,238,OSM height tag,https://www.openstreetmap.org/way/599547915
+osm-way-599547918,中国尊,True,主要楼首层/入口或玻璃细分,,,,0,0,True,无本批有据楼名,528,OSM height tag,https://www.openstreetmap.org/way/599547918
+osm-way-660651173,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/660651173
+osm-way-660651174,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,50,photo-reference approximate massing; see cbd-context-height-overrides.json,https://www.openstreetmap.org/way/660651174
+osm-way-660651176,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,32,photo-reference approximate massing; see cbd-context-height-overrides.json,https://www.openstreetmap.org/way/660651176
+osm-way-660651177,,True,主要楼首层/入口或玻璃细分,,,街角咖啡 / 读书空间 / 城市影像（非实店）,2,5,False,无本批有据楼名,27.5,photo-reference approximate massing; see cbd-context-height-overrides.json,https://www.openstreetmap.org/way/660651177
+osm-way-660651178,,False,,,,,0,0,False,无本批有据楼名,12,photo-reference approximate massing; see cbd-context-height-overrides.json,https://www.openstreetmap.org/way/660651178
+osm-way-662019986,正大集团总部,True,第二批有据楼名,正大中心 / CP CENTER,https://www.cp-center.cn/news-detail/1757.html,,0,0,False,已按专用CPU近景核挂装；方向/尺寸仍推断，原WebGL未验,238,OSM height tag,https://www.openstreetmap.org/way/662019986
+osm-way-690225282,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/690225282
+osm-way-764431811,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431811
+osm-way-764431812,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431812
+osm-way-764431813,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431813
+osm-way-764431814,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431814
+osm-way-764431815,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431815
+osm-way-764431816,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431816
+osm-way-764431817,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431817
+osm-way-764431818,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431818
+osm-way-764431819,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431819
+osm-way-764431820,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431820
+osm-way-764431821,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431821
+osm-way-764431822,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431822
+osm-way-764431823,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431823
+osm-way-764431824,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431824
+osm-way-764431825,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431825
+osm-way-764431826,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431826
+osm-way-764431827,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431827
+osm-way-764431828,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431828
+osm-way-764431829,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431829
+osm-way-764431830,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431830
+osm-way-764431831,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431831
+osm-way-764431832,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431832
+osm-way-764431833,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431833
+osm-way-764431835,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,33,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431835
+osm-way-764431837,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431837
+osm-way-764431844,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431844
+osm-way-764431845,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431845
+osm-way-764431846,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431846
+osm-way-764431884,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431884
+osm-way-764431889,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431889
+osm-way-764431890,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431890
+osm-way-764431891,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764431891
+osm-way-764434360,泰康集团大厦,True,有据223.4m体量及17m玻璃大堂；精确细分为照片引导近似,,,,0,0,False,未添加企业牌；建筑高度依据CTBUH及江河，原地图7m栏不改,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/764434360
+osm-way-764434361,中国人寿金融中心,True,有据双语楼名,中国人寿金融中心 / CHINALIFE FINANCIAL CENTER,https://www.chinalifeinvest.com/,,0,0,False,已按专用CPU近景核挂装；方向/尺寸仍推断，原WebGL未验,190,OSM height tag,https://www.openstreetmap.org/way/764434361
+osm-way-764434385,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434385
+osm-way-764434389,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434389
+osm-way-764434414,三星大厦,True,第二批有据楼名,三星大厦,https://www.arcadis.cn/zh-cn/projects/asia/china/samsung-china-hq,,0,0,False,已按专用CPU近景核挂装；方向/尺寸仍推断，原WebGL未验；三星背阳字可辨但仍暗,260,OSM height tag,https://www.openstreetmap.org/way/764434414
+osm-way-764434415,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434415
+osm-way-764434416,众秀大厦,False,,,,,0,0,False,无本批有据楼名,227.65,OSM height tag,https://www.openstreetmap.org/way/764434416
+osm-way-764434417,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434417
+osm-way-764434418,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434418
+osm-way-764434419,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434419
+osm-way-764434420,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434420
+osm-way-764434421,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434421
+osm-way-764434422,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434422
+osm-way-764434423,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434423
+osm-way-764434424,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434424
+osm-way-764434425,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434425
+osm-way-764434426,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434426
+osm-way-764434427,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434427
+osm-way-764434428,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434428
+osm-way-764434429,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434429
+osm-way-764434430,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434430
+osm-way-764434431,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434431
+osm-way-764434432,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434432
+osm-way-764434433,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434433
+osm-way-764434434,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434434
+osm-way-764434440,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434440
+osm-way-764434441,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434441
+osm-way-764434442,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434442
+osm-way-764434443,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434443
+osm-way-764434444,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434444
+osm-way-764434445,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434445
+osm-way-764434446,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434446
+osm-way-764434447,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434447
+osm-way-764434448,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434448
+osm-way-764434449,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434449
+osm-way-764434450,,False,,,,,0,0,False,无本批有据楼名,3.3,approximate from levels × 3.3m,https://www.openstreetmap.org/way/764434450
+osm-way-916885302,国贸三期B,True,主要楼首层/入口或玻璃细分,,,,0,0,False,无本批有据楼名,296,OSM height tag,https://www.openstreetmap.org/way/916885302
+osm-way-971902535,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,18,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/971902535
+osm-way-1022407217,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1022407217
+osm-way-1147348909,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1147348909
+osm-way-1147348910,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1147348910
+osm-way-1147348911,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1147348911
+osm-way-1147348912,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1147348912
+osm-way-1147348913,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1147348913
+osm-way-1147348914,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1147348914
+osm-way-1147348915,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1147348915
+osm-way-1147348916,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1147348916
+osm-way-1147437712,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1147437712
+osm-way-1147437713,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1147437713
+osm-way-1147437714,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1147437714
+osm-way-1147437717,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1147437717
+osm-way-1147872448,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1147872448
+osm-way-1147872449,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1147872449
+osm-way-1147874047,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1147874047
+osm-way-1197842040,中华人民共和国海关,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1197842040
+osm-way-1197842041,,False,,,,,0,0,False,无本批有据楼名,18,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1197842041
+osm-way-1228189833,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1228189833
+osm-way-1228189834,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1228189834
+osm-way-1228189835,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1228189835
+osm-way-1228189836,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1228189836
+osm-way-1228189837,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1228189837
+osm-way-1228189838,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1228189838
+osm-way-1228189839,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1228189839
+osm-way-1228189840,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1228189840
+osm-way-1228189841,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1228189841
+osm-way-1228189844,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1228189844
+osm-way-1228189845,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1228189845
+osm-way-1228189846,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1228189846
+osm-way-1228189847,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1228189847
+osm-way-1228189848,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1228189848
+osm-way-1228189849,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1228189849
+osm-way-1312797844,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1312797844
+osm-way-1312797845,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1312797845
+osm-way-1559046230,,False,,,,,0,0,False,无本批有据楼名,7,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1559046230
+osm-way-1559046231,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,18,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1559046231
+osm-way-1559046232,,False,,,,,0,0,False,无本批有据楼名,18,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1559046232
+osm-way-1559046233,,True,背景窗框/窗台,,,,0,0,False,无本批有据楼名,18,"generic approximate fallback, not measured",https://www.openstreetmap.org/way/1559046233

@@ -1,13 +1,8 @@
 {
-  "candidateBuild": "beijing-r2-cbd-candidate-10",
-  "candidateSourceTreeSHA256": "5ddaa0b428be329b1a7eea18f9a0b093f3fb68b6d73344632f682b6102518a21",
-  "scope": "owner-private independent CBD preview",
-  "rootEntry": "project/web/cbd-preview.html",
+  "candidateBuild": "beijing-r2-cbd-candidate-11",
+  "candidateSourceTreeSHA256": "d416d5a73d30dd2b180dfba624c71b3115c1ef38c715eb09b6f0e34fe3255a2a",
+  "scope": "public independent CBD preview; panorama retains its previous CBD implementation",
+  "rootEntry": "index.html",
   "runtimeCodeModifiedForHosting": false,
-  "omittedFromHost": [
-    "non-runtime Node test modules",
-    "historical reports",
-    "reference images and video"
-  ],
-  "visualAcceptance": "pending actual browser"
+  "visualAcceptance": "CPU source geometry reviewed; original WebGL pending"
 }
