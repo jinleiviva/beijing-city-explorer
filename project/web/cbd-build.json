@@ -1,5 +1,5 @@
 {
-  "buildID": "beijing-r2-cbd-candidate-15-plaza-single-owner",
+  "buildID": "beijing-r2-cbd-candidate-17-safe-render-near",
   "utc": "2026-10-17T12:44:56.830301+00:00",
   "status": "candidate15_shared_plaza_geometry_and_CPU_image_reviewed_live_WebGL_pending",
   "scope": "Shared CBD module used by both Beijing full-city and focused CBD entries",
@@ -420,5 +420,29 @@
     "postRenderCopyOnlyChanges": [
       "cbd-preview.html: candidate description and entry cache tag"
     ]
+  },
+  "batch17": {
+    "status": "Published candidate; actual WebGL zoom and GPU acceptance pending",
+    "sourceGeometryCandidate": 15,
+    "candidate16CutoutIncluded": false,
+    "staticCases": 336,
+    "adaptiveStaticCases": 84,
+    "dynamicRegression": {
+      "frames": 900,
+      "adaptFrames": 478,
+      "wholeTrafficCheckpoints": 30,
+      "allMeshesIdentical": 625,
+      "CPUms": {
+        "median": 0.5512619999999515,
+        "p95": 0.9185959999999795,
+        "max": 19.559946999999738
+      },
+      "peakRSSKiB": 499596,
+      "limit": "Node CPU motion/geometry regression; not WebGL pixel or GPU performance"
+    },
+    "knownMallRayPreserved": true,
+    "actualWebGLAcceptance": false,
+    "temporalFlickerValidated": false,
+    "wholeCityGPUPerformanceValidated": false
   }
 }

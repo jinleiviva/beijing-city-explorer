@@ -1,0 +1,13 @@
+{
+  "frames": 900,
+  "adaptFrames": 478,
+  "wholeTrafficCheckpoints": 30,
+  "allMeshesIdentical": 625,
+  "CPUms": {
+    "median": 0.5368400000002111,
+    "p95": 0.6763410000003205,
+    "max": 17.526528000000326
+  },
+  "peakRSSKiB": 487416,
+  "limit": "Node CPU motion/geometry regression; not WebGL pixel or GPU performance"
+}

@@ -8,8 +8,8 @@ export function readDiagnosticPose(search=''){
 }
 export function diagnosticHref(href,selection,state={},reset=false){
  const u=new URL(href),q=u.searchParams,config=readCbdRenderStability(new URLSearchParams(selection));
- for(const key of['depth','shadows','treeLod','roofs','roads','plaza'])q.delete(key);
- if(!reset){if(config.depth!=='standard')q.set('depth',config.depth);if(config.shadows!=='dynamic')q.set('shadows',config.shadows);if(config.treeLodHysteresis===0)q.set('treeLod','baseline');if(!config.roofSurfaceOwnership)q.set('roofs','baseline');if(!config.roadSurfaceOwnership)q.set('roads','baseline');if(!config.plazaSurfaceOwnership)q.set('plaza','baseline');}
+ for(const key of['depth','shadows','treeLod','roofs','roads','plaza','nearClip'])q.delete(key);
+ if(!reset){if(config.depth!=='standard')q.set('depth',config.depth);if(config.shadows!=='dynamic')q.set('shadows',config.shadows);if(config.treeLodHysteresis===0)q.set('treeLod','baseline');if(!config.roofSurfaceOwnership)q.set('roofs','baseline');if(!config.roadSurfaceOwnership)q.set('roads','baseline');if(!config.plazaSurfaceOwnership)q.set('plaza','baseline');if(!config.safeNearPlane)q.set('nearClip','baseline');}
  q.set('diagnostics','1');
  if(state.quality==='low'||state.quality==='standard')q.set('quality',state.quality);
  if(state.view)q.set('view',String(state.view));
@@ -18,12 +18,12 @@ export function diagnosticHref(href,selection,state={},reset=false){
 }
 const DEPTH={standard:'标准',logarithmic:'对数（实验）',reversed:'反向（实验）'},SHADOW={dynamic:'动态范围',off:'关闭',fixed:'固定范围（实验）'};
 export function mountStabilityPanel(doc,config,{href,getState,navigate}){
- const el=id=>doc.getElementById(id),panel=el('diagnostics'),depth=el('diagnostic-depth'),shadows=el('diagnostic-shadows'),trees=el('diagnostic-trees'),roofs=el('diagnostic-roofs'),roads=el('diagnostic-roads'),plaza=el('diagnostic-plaza'),status=el('diagnostic-status');
- depth.value=config.depth;shadows.value=config.shadows;trees.value=config.treeLodHysteresis?'hysteresis':'baseline';roofs.value=config.roofSurfaceOwnership?'single-owner':'baseline';roads.value=config.roadSurfaceOwnership?'single-owner':'baseline';plaza.value=config.plazaSurfaceOwnership?'single-owner':'baseline';
+ const el=id=>doc.getElementById(id),panel=el('diagnostics'),depth=el('diagnostic-depth'),shadows=el('diagnostic-shadows'),trees=el('diagnostic-trees'),roofs=el('diagnostic-roofs'),roads=el('diagnostic-roads'),plaza=el('diagnostic-plaza'),nearClip=el('diagnostic-near'),status=el('diagnostic-status');
+ nearClip.value=config.safeNearPlane?'adaptive':'baseline';depth.value=config.depth;shadows.value=config.shadows;trees.value=config.treeLodHysteresis?'hysteresis':'baseline';roofs.value=config.roofSurfaceOwnership?'single-owner':'baseline';roads.value=config.roadSurfaceOwnership?'single-owner':'baseline';plaza.value=config.plazaSurfaceOwnership?'single-owner':'baseline';
  panel.open=new URL(href).searchParams.get('diagnostics')==='1';
- const requested=`请求：${DEPTH[config.depth]}深度 · 阴影${SHADOW[config.shadows]} · 屋顶${config.roofSurfaceOwnership?'单面归属':'原叠面'} · 局部路口${config.roadSurfaceOwnership?'单面归属':'原道路'} · 商城铺地${config.plazaSurfaceOwnership?'单面归属':'原叠面'} · 树LOD${config.treeLodHysteresis?'迟滞':'原阈值'}`;
+ const requested=`请求：${DEPTH[config.depth]}深度 · 近裁面${config.safeNearPlane?'安全自适应':'原固定'} · 阴影${SHADOW[config.shadows]} · 屋顶${config.roofSurfaceOwnership?'单面归属':'原叠面'} · 局部路口${config.roadSurfaceOwnership?'单面归属':'原道路'} · 商城铺地${config.plazaSurfaceOwnership?'单面归属':'原叠面'} · 树LOD${config.treeLodHysteresis?'迟滞':'原阈值'}`;
  status.textContent=requested+'。图形上下文尚未建立。';
- el('diagnostic-apply').addEventListener('click',()=>navigate(diagnosticHref(href,{depth:depth.value,shadows:shadows.value,treeLod:trees.value,roofs:roofs.value,roads:roads.value,plaza:plaza.value},getState())));
+ el('diagnostic-apply').addEventListener('click',()=>navigate(diagnosticHref(href,{depth:depth.value,shadows:shadows.value,treeLod:trees.value,roofs:roofs.value,roads:roads.value,plaza:plaza.value,nearClip:nearClip.value},getState())));
  el('diagnostic-reset').addEventListener('click',()=>navigate(diagnosticHref(href,{},getState(),true)));
- return{update(report){status.textContent=requested+`。实际：${DEPTH[report.activeDepth]}深度，阴影${report.shadowEnabled?'开':'关'}，${report.depthBits??'未知'}位深度。`+(report.requestedDepthSupported?'':'此设备未启用所选深度，已回退。')+' 闪烁尚未完成动态验收。';},unavailable(){status.textContent=requested+'。此浏览器未建立WebGL，不能进行缩放画面对照。';}};
+ return{update(report){status.textContent=requested+`。实际：${DEPTH[report.activeDepth]}深度，阴影${report.shadowEnabled?'开':'关'}，${report.depthBits??'未知'}位深度，近裁面${Number(report.cameraNear).toFixed(2)}米。`+(report.requestedDepthSupported?'':'此设备未启用所选深度，已回退。')+' 闪烁尚未完成动态验收。';},unavailable(){status.textContent=requested+'。此浏览器未建立WebGL，不能进行缩放画面对照。';}};
 }

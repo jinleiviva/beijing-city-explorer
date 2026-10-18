@@ -1,0 +1,187 @@
+{
+  "assumptions": "Analytic standard perspective 24-bit depth. Same screen ray intersects horizontal layers. No measured pixels, GPU interpolation, visibility or polygon offset; cannot prove temporal flicker fixed.",
+  "results": [
+    {
+      "view": "mall",
+      "scale": 1,
+      "distance": 164.51747627531856,
+      "near": 0.35,
+      "depthStepBefore": 0.004717914889401381,
+      "depthStepAfter": 0.004717914889401381,
+      "precisionRatio": 1,
+      "gaps": [
+        {
+          "verticalGap": 0.12,
+          "stepsBefore": 107.58905249891725,
+          "stepsAfter": 107.58905249891725
+        },
+        {
+          "verticalGap": 0.07,
+          "stepsBefore": 62.76028062436841,
+          "stepsAfter": 62.76028062436841
+        },
+        {
+          "verticalGap": 0.05,
+          "stepsBefore": 44.82877187454886,
+          "stepsAfter": 44.82877187454886
+        }
+      ]
+    },
+    {
+      "view": "mall",
+      "scale": 3,
+      "distance": 493.55242882595564,
+      "near": 15.928267342709404,
+      "depthStepBefore": 0.0418067361690215,
+      "depthStepAfter": 0.0009162556101651341,
+      "precisionRatio": 45.62780921088908,
+      "gaps": [
+        {
+          "verticalGap": 0.12,
+          "stepsBefore": 14.915713789392715,
+          "stepsAfter": 680.5713430266383
+        },
+        {
+          "verticalGap": 0.07,
+          "stepsBefore": 8.700833043812418,
+          "stepsAfter": 396.9999500988724
+        },
+        {
+          "verticalGap": 0.05,
+          "stepsBefore": 6.2148807455803,
+          "stepsAfter": 283.571392927766
+        }
+      ]
+    },
+    {
+      "view": "mall",
+      "scale": 5,
+      "distance": 822.5873813765927,
+      "near": 64,
+      "depthStepBefore": 0.11576790727377222,
+      "depthStepAfter": 0.0006263891543464755,
+      "precisionRatio": 184.8178667693492,
+      "gaps": [
+        {
+          "verticalGap": 0.12,
+          "stepsBefore": 5.646916343606427,
+          "stepsAfter": 1043.6510324503133
+        },
+        {
+          "verticalGap": 0.07,
+          "stepsBefore": 3.294034533770417,
+          "stepsAfter": 608.7964355960162
+        },
+        {
+          "verticalGap": 0.05,
+          "stepsBefore": 2.3528818098360116,
+          "stepsAfter": 434.8545968542972
+        }
+      ]
+    },
+    {
+      "view": "block",
+      "scale": 1,
+      "distance": 1131.8237495299345,
+      "near": 64,
+      "depthStepBefore": 0.23799588531882293,
+      "depthStepAfter": 0.0012877320222283448,
+      "precisionRatio": 184.81786676934925,
+      "gaps": [
+        {
+          "verticalGap": 0.12,
+          "stepsBefore": 1.105178590399701,
+          "stepsAfter": 204.25674947682913
+        },
+        {
+          "verticalGap": 0.07,
+          "stepsBefore": 0.6446875110664921,
+          "stepsAfter": 119.14977052815033
+        },
+        {
+          "verticalGap": 0.05,
+          "stepsBefore": 0.46049107933320865,
+          "stepsAfter": 85.1069789486788
+        }
+      ]
+    },
+    {
+      "view": "block",
+      "scale": 1.5,
+      "distance": 1697.7356242949018,
+      "near": 64,
+      "depthStepBefore": 0.5203861502214643,
+      "depthStepAfter": 0.002815670147685996,
+      "precisionRatio": 184.81786676934922,
+      "gaps": [
+        {
+          "verticalGap": 0.12,
+          "stepsBefore": 0.5470738018934375,
+          "stepsAfter": 101.1090130313427
+        },
+        {
+          "verticalGap": 0.07,
+          "stepsBefore": 0.31912638443783864,
+          "stepsAfter": 58.980257601616586
+        },
+        {
+          "verticalGap": 0.05,
+          "stepsBefore": 0.227947417455599,
+          "stepsAfter": 42.12875542972613
+        }
+      ]
+    },
+    {
+      "view": "block",
+      "scale": 2,
+      "distance": 2263.647499059869,
+      "near": 64,
+      "depthStepBefore": 0.9118486873815925,
+      "depthStepAfter": 0.0049337691388872595,
+      "precisionRatio": 184.81786676934925,
+      "gaps": [
+        {
+          "verticalGap": 0.12,
+          "stepsBefore": 0.3259244129658798,
+          "stepsAfter": 60.23665473240634
+        },
+        {
+          "verticalGap": 0.07,
+          "stepsBefore": 0.19012257423009654,
+          "stepsAfter": 35.1380485939037
+        },
+        {
+          "verticalGap": 0.05,
+          "stepsBefore": 0.13580183873578325,
+          "stepsAfter": 25.09860613850264
+        }
+      ]
+    },
+    {
+      "view": "skyline",
+      "scale": 1,
+      "distance": 2857.7088725060853,
+      "near": 64,
+      "depthStepBefore": 1.4226099822523233,
+      "depthStepAfter": 0.007697361770914311,
+      "precisionRatio": 184.81786676934922,
+      "gaps": [
+        {
+          "verticalGap": 0.12,
+          "stepsBefore": 0.3486184482453221,
+          "stepsAfter": 64.43091792114122
+        },
+        {
+          "verticalGap": 0.07,
+          "stepsBefore": 0.20336076147643795,
+          "stepsAfter": 37.58470212066572
+        },
+        {
+          "verticalGap": 0.05,
+          "stepsBefore": 0.14525768676888423,
+          "stepsAfter": 26.84621580047551
+        }
+      ]
+    }
+  ]
+}

@@ -1,6 +1,5 @@
 {
-  "candidateBuild": "beijing-r2-cbd-candidate-15-plaza-single-owner",
-  "candidateSourceTreeSHA256": "5dd25b7a39d3f48a1508990d9c5e4d4e2bfb3776adf10c5624ca8d5a6d20263a",
+  "candidateBuild": "beijing-r2-cbd-candidate-17-safe-render-near",
   "scope": "Shared CBD module used by both Beijing full-city and focused CBD entries",
-  "visualAcceptance": "Shared plaza geometry, coverage probes and actual CPU mall image reviewed; live WebGL temporal flicker remains unverified"
+  "visualAcceptance": "Geometry and CPU camera/traffic regressions only; actual WebGL temporal/GPU acceptance remains blocked"
 }
