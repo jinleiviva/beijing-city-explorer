@@ -3,7 +3,7 @@ import {decorateGround} from './ground-surfaces.js';
 import {project,hash,rng} from './geo.js';
 import {GeometryBatch,polygonGeometry,strip,colorArray} from './geometry.js';
 
-export function buildUrbanContext(features,{landuseSurfaceOverrides}={}){
+export function buildUrbanContext(features,{landuseSurfaceOverrides,landuseSurfaceAppender}={}){
  const surfaces=new Map((landuseSurfaceOverrides?.features||[]).map(f=>[f.properties.sourceLanduseId||f.id,f.geometry])),emptySurfaces=new Set(landuseSurfaceOverrides?.metadata?.emptySurfaceLanduseIds||[]);
  const group=new THREE.Group();group.name='Mapped land-use and surface railways';
  const land=new GeometryBatch(),beds=new GeometryBatch(),rails=new GeometryBatch(),platforms=new GeometryBatch();
@@ -14,7 +14,7 @@ export function buildUrbanContext(features,{landuseSurfaceOverrides}={}){
   if(p.kind==='landuse'&&colors[p.class]){
    const surface=emptySurfaces.has(f.id)?null:(surfaces.get(f.id)||g);const polys=!surface?[]:surface.type==='MultiPolygon'?surface.coordinates:surface.type==='Polygon'?[surface.coordinates]:[];
    const random=rng(hash(f.id)),palette=colors[p.class],color=colorArray(palette[Math.floor(random()*palette.length)]);
-   for(const polygon of polys){const rings=polygon.map(r=>r.map(project));if(rings[0].length<4)continue;const geom=polygonGeometry(rings,-.02);land.addGeometry(geom,new THREE.Matrix4(),color);geom.dispose();landCount++;}
+   for(const polygon of polys){const rings=polygon.map(r=>r.map(project));if(rings[0].length<4)continue;if(!landuseSurfaceAppender?.({batch:land,id:f.id,rings,y:-.02,color})){const geom=polygonGeometry(rings,-.02);land.addGeometry(geom,new THREE.Matrix4(),color);geom.dispose();}landCount++;}
   }
   if(p.kind==='railway'&&p.tunnel!=='yes'&&Number(p.layer||0)>=0){
    const lines=g.type==='MultiLineString'?g.coordinates:g.type==='LineString'?[g.coordinates]:[];

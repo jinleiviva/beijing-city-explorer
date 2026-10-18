@@ -7,7 +7,7 @@ import * as THREE from '../vendor/three.module.js';
 import {project,BOUNDS,hash,rng,yieldFrame} from './geo.js';
 import {GeometryBatch,polygonGeometry,strip,colorArray} from './geometry.js';
 
-export async function buildTerrain(features,onProgress,{parkSurfaceOverrides,roadSurfaceAppender=null}={}){
+export async function buildTerrain(features,onProgress,{parkSurfaceOverrides,roadProfiles:sharedRoadProfiles,roadSurfaceAppender=null}={}){
  const parkSurfaces=new Map((parkSurfaceOverrides?.features||[]).map(f=>[f.properties.sourceParkId||f.id,f.geometry]));const emptyParkSurfaces=new Set(parkSurfaceOverrides?.metadata?.emptySurfaceParkIds||[]);
  const root=new THREE.Group();root.name='Mapped city ground';
  const sw=project([BOUNDS[0],BOUNDS[1]]),ne=project([BOUNDS[2],BOUNDS[3]]);
@@ -15,7 +15,7 @@ export async function buildTerrain(features,onProgress,{parkSurfaceOverrides,roa
  const base=new THREE.Mesh(new THREE.BoxGeometry(width,60,depth),new THREE.MeshStandardMaterial({color:'#a8ada7',roughness:1}));base.position.set(cx,-31,cz);base.receiveShadow=true;root.add(base);
  const underside=new THREE.Mesh(new THREE.BoxGeometry(width+24,28,depth+24),new THREE.MeshStandardMaterial({color:'#9e9989',roughness:1}));underside.position.set(cx,-74,cz);root.add(underside);
  const tiles=new Map();function tile(x,z){const key=`${Math.floor(x/2500)},${Math.floor(z/2500)}`;if(!tiles.has(key)){const ground=new GeometryBatch();tiles.set(key,{key,ground,roadBatch:ground,curbBatch:ground,waterBatch:new GeometryBatch(),parkBatch:ground,waterEdgeBatch:ground});};return tiles.get(key);}
- const roads=[],parks=[],waters=[],roadProfiles=createRoadElevationProfiles(features);let processed=0;
+ const roads=[],parks=[],waters=[],roadProfiles=sharedRoadProfiles||createRoadElevationProfiles(features);let processed=0;
  for(const f of features){const p=f.properties,g=f.geometry;
   if(p.kind==='road'){
    if(p.tunnel==='yes'||p.layer<0)continue;

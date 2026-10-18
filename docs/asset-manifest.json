@@ -1,0 +1,34 @@
+{
+  "createdUTC": "2026-10-17T01:39:50Z",
+  "sourcePolicy": "Original geometry and procedural PBR; reference images are not runtime textures or bundled source assets",
+  "paidAssets": 0,
+  "aiGeneratedImages": 0,
+  "runtimeTexturesAdded": 0,
+  "references": [
+    {
+      "url": "https://commons.wikimedia.org/wiki/File:Yandai_Xiejie_4.jpg",
+      "author": "EditQ",
+      "imageDate": "2023-07-20",
+      "license": "CC BY-SA 4.0",
+      "licenseURL": "https://creativecommons.org/licenses/by-sa/4.0/",
+      "use": "Visual construction reference only; no pixel copy in runtime; no current tenant claim"
+    },
+    {
+      "file": "user-supplied original video",
+      "use": "Visual target for geometry/material/foliage separation only; no pixel copy or extracted assets redistributed"
+    }
+  ],
+  "originalModules": [
+    "heritage-pilot.js",
+    "materials.js",
+    "hero-trees.js"
+  ],
+  "rightsNotes": "Preserve original OpenStreetMap ODbL attribution and Three.js MIT license; browser sources and existing data inherit original project notices.",
+  "sourceHashes": {
+    "web/src/round2/heritage-pilot.js": "ace024528e331905ab5da765ae6df6ebcc6a8055305f9c335b81049928162a0d",
+    "web/src/round2/hero-trees.js": "989e55fd02847cccaf19c42b1ed83b1289e66a939c6bdc37b45f70a8a5de2756",
+    "web/src/round2/materials.js": "125313b627a03ded3a0616920616f0b48d38bdf73bb8fbf222a63f2a53b51b13",
+    "web/src/round2/review-panel.js": "33ad1f4146678586f289ec3aad0e2eafcb39ad7a35ac7f44bac63eafb75a4027"
+  },
+  "updatedUTC": "2026-10-17T02:02:33.403393+00:00"
+}

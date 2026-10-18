@@ -1,6 +1,6 @@
 # CBD candidate 11: bounded massing and street-life update
 
-This release updates the independent CBD viewer. The full-city viewer has not yet incorporated these CBD changes. Zoom-out flicker remains unresolved.
+This is a new bounded improvement batch begun on 17 October 2026 at 09:37:35 UTC. The earlier eight-hour production window closed at 09:31:39 UTC. A platform interruption from 09:44:50 to 09:56:50 was blocked time, not effective production. A second interruption from approximately 10:20:28 to 10:27:11 was also excluded.
 
 ## Changes
 
@@ -37,7 +37,7 @@ CPU images use the actual Three.js geometry, world and instance matrices, camera
 
 No reference photograph or video is distributed as a texture. Text outlines reuse the existing licensed font glyph data and its accompanying license. Other code and asset attributions remain in ATTRIBUTION.md and the existing runtime license files.
 
-This public release is synchronized from the frozen, reviewed candidate 11 snapshot.
+This candidate is an aggregate update to the existing private preview. Public repository synchronization is a separate operation performed only after this candidate is verified and frozen. No unreviewed working directory is a release artifact.
 
 ## Coverage accounting
 

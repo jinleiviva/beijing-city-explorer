@@ -1,13 +1,17 @@
 {
-  "buildID": "beijing-r2-cbd-candidate-13-road-ownership",
-  "utc": "2026-10-17T11:34:40.592834+00:00",
-  "status": "candidate13_targeted_road_surface_ownership_CPU_image_reviewed_WebGL_temporal_pending",
-  "scope": "Independent CBD candidate; previous Yandai sample retained, no propagation",
+  "buildID": "beijing-r2-cbd-candidate-15-plaza-single-owner",
+  "utc": "2026-10-17T12:44:56.830301+00:00",
+  "status": "candidate15_shared_plaza_geometry_and_CPU_image_reviewed_live_WebGL_pending",
+  "scope": "Shared CBD module used by both Beijing full-city and focused CBD entries",
   "baselineRuntimeSHA256": "d88c7e45c6ba3f023edcc5624f2853a5229e9dd17c3bd544b984260fe4100e47",
-  "dataSHA256": "9ec30d8046fc47dda47608020b9c98367e242bf5ca75e12dba057e2ee8e186a5",
+  "dataSHA256": "8eb71f41c2b504c22fb033dcea6d8337076cd102060cfe0c0b400ec9d6c208b0",
   "visualAcceptance": false,
+  "round2StartUTC": "2026-10-17T01:31:39Z",
+  "round2EndUTC": "2026-10-17T09:31:39Z",
   "batch11": {
+    "startedUTC": "2026-10-17T09:37:35Z",
     "newBoundedBatch": true,
+    "priorEightHourWindowClosed": true,
     "taikangHeightMetres": 223.4,
     "oldFallbackMetres": 66.55728413490579,
     "skylinePresetAdded": true,
@@ -22,12 +26,12 @@
     "flickerFixClaimed": false,
     "realCompanyEmblemCount": 0
   },
-  "sourceTreeSHA256": "d3878781821f4183ec58fe8282c4f6e99e0c7638eb39b7a92ac50bb0fbc01964",
+  "sourceTreeSHA256": "5dd25b7a39d3f48a1508990d9c5e4d4e2bfb3776adf10c5624ca8d5a6d20263a",
   "webSourceHashes": {
     "cbd-preview.css": "78b46605916188d6c6de731d29ccf78177231dddf58f6c6c23f51fe54fbe8ddc",
-    "cbd-preview.html": "0d0b5c075020dc9585acaee6288e7ebc37331175d2ffc505bbe6a032972f8301",
-    "data/cbd-scene.json": "9ec30d8046fc47dda47608020b9c98367e242bf5ca75e12dba057e2ee8e186a5",
-    "index.html": "c754e6ba2198fe3e078ab2d0866121f38dfcf7c6f286851a4dc082c056b5db84",
+    "cbd-preview.html": "f646cfdd24358aa61dda85e9017beefcd451b35b80443053952dfaba0211d00c",
+    "data/cbd-scene.json": "8eb71f41c2b504c22fb033dcea6d8337076cd102060cfe0c0b400ec9d6c208b0",
+    "index.html": "0119329cd26983f547b1af9adf61d1ea808a3e7baa27eb05f58e5a8ffb2626ce",
     "package.json": "a97b81bcc4659f5f3ea1b2bdf4fbad85dc74bb15fdf7b0818e1bf3423d945d57",
     "src/architectural-planting-exclusions.js": "029888c438ede29b4bbb493b2413b863768cdc1f71a130cbff8f81107ab08f49",
     "src/architecture/agriculture-exhibition.js": "7fddbb5db62877714dda9a8f50ace456f684680d826648491bb872a9be5a6400",
@@ -123,8 +127,8 @@
     "src/infill-constraints.js": "a4152b714c86ac35f28685acfd1a9480280f02cfaac00b0accdf01f80eb908cb",
     "src/infill.js": "ccc02e3ca646eb68b88233a714155fc5f52469eab557e5d7a51102681b4a4271",
     "src/landmark-picking.js": "e0db3b54c0a5d2004e1aa7961682cb69d4c0c9cb2932c545bb8ae273aecdf7f9",
-    "src/landscape.js": "4e923abd18386fbe693182074ac0884b3c8b19af8ec0484a6713a892c07dda8c",
-    "src/main.js": "bb560eb995db07bed72e8ac924a54be176e6af054fdd49196bc12a07a5ac7b0f",
+    "src/landscape.js": "074a135f10c031e591a6d116fbb48ff1ad56337e30bf9425eae4fedf65ecfa6c",
+    "src/main.js": "7dda94a987b38197aa7e585b97fe5a153d9882cf7de0b616f76f8d13a4ef997d",
     "src/neighborhood-lod.js": "4cf28155be05dde81c7671b4541317fa1c302f3f786aac00d5fef1d94f81c69a",
     "src/oldtown-frontages.js": "48de7cce4fe00718d4d48f02ab5644914c3592c38bcb6f1b60c57b2f9b674803",
     "src/paired-median-barriers.js": "8a225a6bfb74c5c3cc6d48fe80c258d3068891014bb94ae241594f5301f57a50",
@@ -149,13 +153,13 @@
     "src/round2/cbd-facade-identities/index.js": "65e1db50b7bb25ed8358abcba6cce852569f1011e08d639cae4e4c81a68114b9",
     "src/round2/cbd-forecourt-route/index.js": "a3601a91eccd89f844858911379afd0b030dca00ffecefba1b3ab76db66e3896",
     "src/round2/cbd-frontages/index.js": "6841e66e9da852230447f5f69e9e725acde63612feae349a216ad943de020fd6",
-    "src/round2/cbd-main.js": "74aabda846ff9fdbb7e645d247a3a7e3174a248233bec6fdbcd6fab6080128a6",
+    "src/round2/cbd-main.js": "ed9551adb534db3d6f27c12a14a74aa377134be9c94fb1fda795e2a9ec3a9506",
     "src/round2/cbd-major-facades/index.js": "1ca32cd54c47dcde7e5bd0e98759d50c8bc9a9a0f579bc127faa1b9198367001",
     "src/round2/cbd-mall-corner/FONT_LICENSE.txt": "65e784704b9bf8bf4cf86aff1b91830ec164387c7af0a6a52343b2945ffa93de",
     "src/round2/cbd-mall-corner/canopy-volume.js": "064b067e66aa2a309d5df38bd510091a5e90278c2e78110602bb0722ca2a0489",
     "src/round2/cbd-mall-corner/glyph-data.js": "932897b3a3425fc41bc906b2d66ebfa7348c56a7244128627a9f4f3ebe8e6e8e",
     "src/round2/cbd-mall-corner/index.js": "b75237c9de0588d9b61c4fb3d2662d73fbd034177928122791a2c388792af45f",
-    "src/round2/cbd-mall-corner/plaza.js": "018826727f52c9b3a7f3c280295c1344dc3f43244784b26a8d93d464c4b0b9b8",
+    "src/round2/cbd-mall-corner/plaza.js": "16b8bf079f7199cab2e1bb0c497a80c9e79acd0826c156e486e28a57af99bb95",
     "src/round2/cbd-mall-corner/signage.js": "f5dbd13e868fdf6bf5648d6ae53a682cd3b97af18d081f21c3fe55182c34bb45",
     "src/round2/cbd-mall-corner/street-lamps.js": "b884e76c63f7a5fb5d59c129314a96494a88d89427450dac43218fbbd45c25a3",
     "src/round2/cbd-mall-corner/tree-beds.js": "430e2dcf8138a3759098112cd2cf67c87f331f476d848bf7bbc9bc8d2989c6f3",
@@ -173,14 +177,15 @@
     "src/round2/cbd-photo-street/glyph-data.js": "ac372847d83007ad97e800ea91c3668e0e5e23b3c1bfa51b917ea88c936d0880",
     "src/round2/cbd-photo-street/index.js": "268ccf748b95abdc3cb644842daea7d12d09f4c45bf52ce5c184b6741d91104a",
     "src/round2/cbd-photo-street/lettering.js": "edfef48d1a8447d6c00a2392aebd7b20b04fd63fa073ae0c88a09cf2e5cf68ee",
-    "src/round2/cbd-render-stability/index.js": "bebcaa1fb9e524dd683a3b396c77a2b9360730f42bc81096cddbe41a669bbb85",
-    "src/round2/cbd-render-stability/ui.js": "17a1a71c1f034377cfccf76868a202f47172a70fa2442932127418b92ecd7db2",
+    "src/round2/cbd-plaza-surface-ownership/index.js": "dc0b38ea2d6732e896b90e716cc22d9e59d959869aaa13c703fb268a07a0df60",
+    "src/round2/cbd-render-stability/index.js": "056fa4e3b5af2c5e1213df3ac9d326d4f01e4f93a672758a19a48f4d56c9b0c5",
+    "src/round2/cbd-render-stability/ui.js": "e4856ccd7555589d202936d33518effc022b01dfca845daa50411bd439bff072",
     "src/round2/cbd-road-surface-ownership/index.js": "4b17b63a5d4bc3f52522b5681beec9b95c8caf0cff683c760719ae76e00fd28b",
     "src/round2/cbd-roof-details/FONT_LICENSE.txt": "65e784704b9bf8bf4cf86aff1b91830ec164387c7af0a6a52343b2945ffa93de",
     "src/round2/cbd-roof-details/glyph-data.js": "79855023d20b698007ab9731d5e99851079aa2f1a4246df8e09a56adfaca18ef",
     "src/round2/cbd-roof-details/index.js": "3a588421d381c18626035b475e07393ed3507b2d1054c4afb79708a23008adbf",
     "src/round2/cbd-roof-surface-ownership/index.js": "c33f4da67b35c6b8379f48ab34561de74e5a78cc5bc04fef68f2404f266b4d7c",
-    "src/round2/cbd-scene.js": "bb74fd68d09eabd6cb8a6804aa3b282808fbe36228c25bbc7bd6481383a64a81",
+    "src/round2/cbd-scene.js": "113f7059e8ff17ae788cf19883b4290f78d287783c0b865dd3cf207b43558924",
     "src/round2/cbd-second-identities/FONT_LICENSE.txt": "65e784704b9bf8bf4cf86aff1b91830ec164387c7af0a6a52343b2945ffa93de",
     "src/round2/cbd-second-identities/glyph-data.js": "058550b5e801a72f130370e4bfe37318c7ee6806da0550a8084a9f47f001fb87",
     "src/round2/cbd-second-identities/index.js": "6ac1c7e502ac82671212c96f8ce581468910692f76edd94678531635d4d0c8ad",
@@ -189,7 +194,8 @@
     "src/round2/cbd-street-detail/kerry-frontage.js": "3781209c56aad733d364f815139dce87e4eb7bdb3a6203c3e8e1bb3d60b7b139",
     "src/round2/cbd-street-detail/mid-foliage.js": "29bc3ae488b99e3af0e65779c933eb9bc8ada2fcc313c4419aeb155ab4bccacd",
     "src/round2/cbd-taikang-correction/index.js": "2cb6d30bac7d20cc049c74dd8cc226e8c258897cb702d598e044599bca841893",
-    "src/round2/cbd-view-policy.js": "b445755f6842ac538cccf7a9a2ce642fe3f72d13cdee2ef280def9daa1774ef2",
+    "src/round2/cbd-view-policy.js": "4b38b6b7e26c99b90b233c240fe99713364e974d7078446d0edcc99687c65780",
+    "src/round2/cbd-world-ownership.js": "7e7ff2594e62f2f711fdb811d6313266bd515e95adaababade0b08c071dd02d4",
     "src/round2/heritage-pilot.js": "ace024528e331905ab5da765ae6df6ebcc6a8055305f9c335b81049928162a0d",
     "src/round2/hero-trees.js": "04b619bdd126196b5cfe88c05b1ee73497f5a2d177f0880ed8c6dab215d03722",
     "src/round2/materials.js": "125313b627a03ded3a0616920616f0b48d38bdf73bb8fbf222a63f2a53b51b13",
@@ -199,14 +205,14 @@
     "src/spatial.js": "5fcf21182aca218d09b35f17f1d78ee9509c252a63c9bc2afefea05278f3b930",
     "src/streaming-lod.js": "7a971528a0971bedebad6d4d0d7b949c7a7e10b26bf379048ff375371a047191",
     "src/street-corners.js": "417674ecc4487e3d86df5bae7c4b83de8887e99d8efdb8b84306c4470fd4ca74",
-    "src/streetscape.js": "a97818f128908485de78d13827e7a813ca17fe736362f525d7ed694bbbe2d6d9",
+    "src/streetscape.js": "013b8c19027c5c516a492820e6579ae2969f70bdbb1c414cd74570a94a0bcaa1",
     "src/surface-detail.js": "1e57db3904a4a374047a301142933847433bb96b4b6570d93071fd5563b0ba75",
-    "src/terrain.js": "46960dcf56e9109d96311e60e1aa5cf1e92e71dbb176de54dfc0de4f2ec29091",
+    "src/terrain.js": "d3c980ef365d3b2355ee993dc1d69efdf9b5722159e54cdc08ccd835c229e820",
     "src/traditional-corridors.js": "7874eaa8f1d5c607d5475c99ce6cd39406b2f58962a41efca7029cb14229ea32",
     "src/traffic-signals.js": "7dd1bbe6f8144ece0112bd55cf81097918a8abe8c5a805a8ca0441ccade386d5",
     "src/traffic.js": "45ab2f0d1ef927dbb86edfe7e4485f552890e11bc0dcabaaa67bface4c763ce0",
     "src/tree-ground-guard.js": "7a1fe77023415d13fddbbe923072ee0bc1e3c60f415be6dd4b433878d68f155d",
-    "src/urban-context.js": "16400e007c928303a00d09495dce122ae613bf0f0b554ad3da72508f9247b3c5",
+    "src/urban-context.js": "1d59bc8f1454ab0fb063dd0ef23cbc16c43040f4260bd2c0b38c22f220ac4dd9",
     "src/wanning-bridge.js": "0c0b9f1bc01e1fb4f40fcec06c9ec1859632da45517b65eb4772f347c5b0ca23",
     "src/waterfront-frontages.js": "64426826f03713fe5e7844aa7f4c10a5b9eecbac1c60d1c9f993232e25a3fd2c",
     "src/waterfront.js": "0e9fdafa16119c5b04078400852d43fff42be88a0d0ae835fc22688f79f12432",
@@ -217,7 +223,7 @@
     "vendor/three.core.js": "9edde002b066a9a05676a6127f67735b62baf399bdea529f2f7e31657da769e6",
     "vendor/three.module.js": "9052042d676cb0fdc1ddfefe193053f34b7ac0513a616fdac4535d49987812ea"
   },
-  "candidate": 13,
+  "candidate": 15,
   "batch12": {
     "roofSurfaceOwnership": "Exact covered upward cap portions removed, facade/footprint/building height retained; B silver cap changed to same-size perimeter bars",
     "treeLOD": "CBD-only .12 hysteresis; global-city legacy tree policy unchanged",
@@ -303,5 +309,116 @@
       "sharedWholeCityIntegrated": false
     }
   },
-  "hostingNote": "Public navigation and release metadata adapted from the canonical source snapshot; source hashes describe that original snapshot."
+  "batch14": {
+    "sharedCBDVersion": "cbd11-shared-1",
+    "baseCandidate": 13,
+    "roof12AndRoad13Preserved": true,
+    "cachedNearTilesRepaired": 16,
+    "cachedTrianglesIndexSwapped": 35750,
+    "remainingUnpatchedNearTiles": 205,
+    "remainingOpposedTriangles": 422386,
+    "fullCityWebGLAcceptance": false,
+    "cpuStatus": "623 meshes identical across independent/host, 120 seconds complete records identical; boundary profiles and signals pass",
+    "sharedWholeCityIntegrated": true,
+    "CPUImagesReviewed": true,
+    "boundedHostRenderOnly": true,
+    "normalWindingAudit": {
+      "comparedFiveTileTriangles": 15743,
+      "opposedBefore": 9693,
+      "opposedAfter": 0,
+      "onlyIndexChanged": true
+    },
+    "landuseFlickerFixed": false,
+    "userShadowOffStillFlickers": true,
+    "CPUSequentialReport": {
+      "status": "PASS_SEQUENTIAL_SHARED_CPU",
+      "geometry": {
+        "sha256": "a7c05b63f01e0226e099eeec0864ec35cf9175d61b19b6d249d66c8803b72c49",
+        "meshes": 623,
+        "nonfinite": 0
+      },
+      "simulationSeconds": 120,
+      "checkpoints": [
+        4,
+        30,
+        60,
+        120
+      ],
+      "sameCarAndPersonRecords": true,
+      "sameMaterialsAndGeometry": true,
+      "sameTreeCount": 1253,
+      "qualityTransitions": 4,
+      "peakRSSKiB": [
+        422104,
+        455424
+      ],
+      "limitations": "CPU identity only; WebGL, pixels, FPS and temporal flicker untested."
+    },
+    "CPUImageSHA256": {
+      "shared-host-overview-v2-cpu.png": "8cb525619bcc4799593764ebe5e180f8fffeb2efa75c608883aa19069f103cfd",
+      "shared-host-boundary-v2-cpu.png": "f50e861d1da9de789d534f51e1601301dc109c9c01c901bacfbbefdbef9fb2ac"
+    }
+  },
+  "batch15": {
+    "sourceIDs": [
+      "context-osm-way-233523264",
+      "context-osm-way-1197842042"
+    ],
+    "overlapRemovedM2": 133718.61107612602,
+    "coverTriangles": 220,
+    "coverAreaM2": 3365.652870349586,
+    "quantization": {
+      "reorientedTriangles": 33,
+      "reorientedAreaM2": 8.149445056915283e-05,
+      "maximumReorientedAreaM2": 8.985400199890137e-06,
+      "collapsedTriangles": 463
+    },
+    "otherUnchangedMeshBatches": 624,
+    "motionCheckpoints": [
+      8,
+      30
+    ],
+    "fourQualityTransitionsPassed": true,
+    "sourceHeightAndCameraUnchanged": true,
+    "CPUImageReviewed": true,
+    "temporalFlickerValidated": false,
+    "remainingOverlapElsewhere": true,
+    "userShadowOffStillFlickers": true,
+    "diagnostic": "Folded plaza single-owner/baseline selector; default ownership on",
+    "actualFloat32": {
+      "vertices": 4277,
+      "triangles": 1457,
+      "wrongWinding": 0,
+      "totalPairOverlapM2": 446990.103274996,
+      "selectedPairOverlapM2": 0.07685595488425713,
+      "baseUnderCoverM2": 0.005238136979819527
+    },
+    "image": {
+      "utc": "2026-10-17T12:44:56.778964+00:00",
+      "actualImageReviewed": true,
+      "staticContinuityPassed": true,
+      "temporalFlickerValidated": false,
+      "imageFilename": "cbd-plaza-single-owner-v1-cpu.png",
+      "imageSHA256": "a035cda990926dd8fb04e4f0455edaf1445b77553dc3da9ae31b84e8999ab701",
+      "imageBytes": 840582,
+      "width": 800,
+      "height": 500,
+      "timeSeconds": 8,
+      "cameraAndLightsEqualToRoad13Image": true,
+      "visibleObservations": [
+        "Mall frontage paving is continuous without obvious cut-out holes",
+        "Ground contact, street furniture, crossings and road asphalt remain",
+        "Fragmented black regions along frontage are reduced in this static comparison"
+      ],
+      "limitations": [
+        "Cycles CPU materials and light approximation; not live WebGL",
+        "Historical road image predates a tree LOD change; not all changed pixels are attributed to land-use ownership",
+        "Other land-use overlaps and distant depth precision are outside the verified scope"
+      ]
+    },
+    "sourceFreezeSHA256": "19debeb21037e69e8d13a39724ddaf38c9b79d5068d42bae0eb2a1b4c5021911",
+    "postRenderCopyOnlyChanges": [
+      "cbd-preview.html: candidate description and entry cache tag"
+    ]
+  }
 }

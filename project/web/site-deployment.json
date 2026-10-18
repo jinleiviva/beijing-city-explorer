@@ -1,7 +1,6 @@
 {
-  "candidateBuild": "beijing-r2-cbd-candidate-13-road-ownership",
-  "candidateSourceTreeSHA256": "d3878781821f4183ec58fe8282c4f6e99e0c7638eb39b7a92ac50bb0fbc01964",
-  "scope": "public independent CBD targeted road surface repair and diagnostic controls; panorama retains its previous CBD implementation",
-  "rootEntry": "index.html",
-  "visualAcceptance": "Source geometry CPU image and structural checks; temporal WebGL flicker remains unverified"
+  "candidateBuild": "beijing-r2-cbd-candidate-15-plaza-single-owner",
+  "candidateSourceTreeSHA256": "5dd25b7a39d3f48a1508990d9c5e4d4e2bfb3776adf10c5624ca8d5a6d20263a",
+  "scope": "Shared CBD module used by both Beijing full-city and focused CBD entries",
+  "visualAcceptance": "Shared plaza geometry, coverage probes and actual CPU mall image reviewed; live WebGL temporal flicker remains unverified"
 }

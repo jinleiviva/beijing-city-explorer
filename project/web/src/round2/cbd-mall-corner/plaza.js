@@ -23,8 +23,9 @@ export function mallPlazaRecipe(roads,collision,{quality='std'}={}){
  const site=CBD_CONTEXT_SITES.cwtc_mall_north,a=project(site.anchorWGS84),edges=footprintEdges(site.points),chosen=[edges.find(e=>e.nz<-.98&&e.center[0]<0),edges.filter(e=>e.nx<-.98).sort((a,b)=>b.length-a.length)[0]],out=new Recipe('North mall paired street-facing plaza bands',{buildings:0,quality,source:MALL_CORNER_SOURCE,sourceId:site.osmId,groundY:MALL_CORNER_GROUND,pavingTopAboveLanduse:.008,placementAccuracy:'Photo-informed planting and parked-cycle types; arrangement authored and kept outside mapped vehicle roads/buildings',placements:[],noNewTrees:true}),fine=quality!=='low',carriageways=roads.filter(r=>r.y<4&&!['footway','path','pedestrian','steps','cycleway'].includes(r.class));
  for(let ei=0;ei<chosen.length;ei++){const e=chosen[ei],r=new Recipe('Mall plaza edge'),origin=[a[0]+e.center[0],a[1]+e.center[1]],c=Math.cos(e.rotation),s=Math.sin(e.rotation),world=(u,v)=>[origin[0]+u*c+v*s,origin[1]-u*s+v*c];
   const safe=(u,v,ru,rv)=>[-ru,ru].every(du=>[-rv,rv].every(dv=>{const[x,z]=world(u+du,v+dv);return!insideBuilding(collision,x,z,.05)&&!carriageways.some(road=>road.points.slice(1).some((p,i)=>distanceToSegment(x,z,road.points[i],p)<road.width/2+.1));}));
-  // Slab tops sit 8mm above the original land-use surface, avoiding coplanar
-  // depth fighting while keeping the apron essentially flush and accessible.
+  // Slab tops retain the original accessible 8mm step. Candidate15 removes
+  // underlying land-use only within their exact opaque top triangles; the
+  // 8mm height alone is not sufficient depth separation in distant views.
   // Broad clear apron supports the observed recessed gallery. Side planting is
   // grouped rather than an obstacle across the inferred central door approach.
   for(let u=-e.length/2+1;u<e.length/2-1;u+=2)for(let v=1;v<9;v+=2){if(safe(u,v,.99,.99))box(r,(Math.round(u/2)%9===0)?'stoneDark':'paving',u,-.027,v,1.985,.07,1.985,'individual plaza stone slab');}

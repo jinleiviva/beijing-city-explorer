@@ -1,6 +1,6 @@
 import {mountStabilityPanel,readDiagnosticPose} from './cbd-render-stability/ui.js';
 import {readCbdRenderStability,cbdRendererDepthOptions,cbdShadowRange,cbdRenderStabilityReport} from './cbd-render-stability/index.js';
-import {configureCbdOrbit} from './cbd-view-policy.js';
+import {configureCbdOrbit,CBD_CAMERA_DEPTH} from './cbd-view-policy.js';
 import {applyCbdWarmGreyPalette} from './cbd-color-variant/index.js';
 import * as THREE from '../../vendor/three.module.js';
 import {OrbitControls} from '../../vendor/OrbitControls.js';
@@ -9,7 +9,7 @@ import {buildCbdScene,CBD_VIEWS} from './cbd-scene.js';
 
 const $=id=>document.getElementById(id),query=new URLSearchParams(location.search);
 if(query.has('clean'))document.body.classList.add('clean');
-const CODE_BUILD_ID='beijing-r2-cbd-candidate-13-road-ownership';
+const CODE_BUILD_ID='beijing-r2-cbd-candidate-15-plaza-single-owner';
 const stability=readCbdRenderStability(query),diagnosticPose=readDiagnosticPose(query);
 let diagnosticState=()=>({quality:query.get('quality'),view:query.get('view'),...(diagnosticPose||{})});
 const diagnosticPanel=mountStabilityPanel(document,stability,{href:location.href,getState:()=>diagnosticState(),navigate:href=>location.assign(href)});
@@ -24,7 +24,7 @@ renderer.shadowMap.enabled=stability.shadows!=='off';renderer.shadowMap.type=THR
 renderer.debug.onShaderError=(gl,p,v,f)=>shaderErrors.push({program:gl.getProgramInfoLog(p),vertex:gl.getShaderInfoLog(v),fragment:gl.getShaderInfoLog(f)});
 renderer.domElement.addEventListener('webglcontextlost',()=>contextEvents.push({event:'lost',utc:new Date().toISOString()}));
 renderer.domElement.addEventListener('webglcontextrestored',()=>contextEvents.push({event:'restored',utc:new Date().toISOString()}));
-const camera=new THREE.PerspectiveCamera(43,innerWidth/innerHeight,.35,6000);
+const camera=new THREE.PerspectiveCamera(43,innerWidth/innerHeight,CBD_CAMERA_DEPTH.near,CBD_CAMERA_DEPTH.far);
 const controls=new OrbitControls(camera,renderer.domElement);configureCbdOrbit(controls);
 const hemisphere=new THREE.HemisphereLight('#d4e6f1','#99917e',.65);scene.add(hemisphere);
 const sun=new THREE.DirectionalLight('#fff0d5',2.7);sun.castShadow=true;sun.shadow.bias=-.00006;sun.shadow.normalBias=.08;scene.add(sun,sun.target);
@@ -56,7 +56,7 @@ window.addEventListener('resize',()=>{camera.aspect=innerWidth/innerHeight;camer
 document.addEventListener('visibilitychange',()=>{last=performance.now();simRemainder=0;});
 applyQuality();setView(query.get('view')||'mall');
 if(diagnosticPose){const damping=controls.enableDamping;controls.enableDamping=false;camera.position.fromArray(diagnosticPose.position);controls.target.fromArray(diagnosticPose.target);camera.fov=diagnosticPose.fov;camera.updateProjectionMatrix();controls.update();controls.enableDamping=damping;updateSun();}
-async function init(){try{const r=await fetch('./data/cbd-scene.json');if(!r.ok)throw new Error('CBD 数据 HTTP '+r.status);const data=await r.json();cbd=await buildCbdScene(data,label=>$('loading-label').textContent=label,{palette,treeLodHysteresis:stability.treeLodHysteresis,roofSurfaceOwnership:stability.roofSurfaceOwnership,roadSurfaceOwnership:stability.roadSurfaceOwnership});manifestBuildIdentity=await fetch('./cbd-build.json',{cache:'no-store'}).then(r=>r.json()).then(b=>b.buildID).catch(()=>null);if(manifestBuildIdentity&&manifestBuildIdentity!==CODE_BUILD_ID)errors.push('页面版本与发布记录不一致，请正常刷新页面。');$('palette').textContent='配色 · '+(palette==='warm-grey'?'暖灰蓝灰':'原版');scene.add(cbd.root);applyQuality();ready=true;last=performance.now();$('loading').classList.add('done');console.log('CBD_READY',stats());}catch(e){errors.push(String(e));$('loading').classList.add('done');$('error').hidden=false;$('error').textContent='CBD 尚未完成加载：\n'+e.message;console.error(e);}}
+async function init(){try{const r=await fetch('./data/cbd-scene.json');if(!r.ok)throw new Error('CBD 数据 HTTP '+r.status);const data=await r.json();cbd=await buildCbdScene(data,label=>$('loading-label').textContent=label,{palette,treeLodHysteresis:stability.treeLodHysteresis,roofSurfaceOwnership:stability.roofSurfaceOwnership,roadSurfaceOwnership:stability.roadSurfaceOwnership,plazaSurfaceOwnership:stability.plazaSurfaceOwnership});manifestBuildIdentity=await fetch('./cbd-build.json',{cache:'no-store'}).then(r=>r.json()).then(b=>b.buildID).catch(()=>null);if(manifestBuildIdentity&&manifestBuildIdentity!==CODE_BUILD_ID)errors.push('页面版本与发布记录不一致，请正常刷新页面。');$('palette').textContent='配色 · '+(palette==='warm-grey'?'暖灰蓝灰':'原版');scene.add(cbd.root);applyQuality();ready=true;last=performance.now();$('loading').classList.add('done');console.log('CBD_READY',stats());}catch(e){errors.push(String(e));$('loading').classList.add('done');$('error').hidden=false;$('error').textContent='CBD 尚未完成加载：\n'+e.message;console.error(e);}}
 function animate(now){requestAnimationFrame(animate);const raw=Math.max(0,(now-last)/1000);last=now;if(!ready)return;
  controls.update();controls.target.x=THREE.MathUtils.clamp(controls.target.x,4200,5800);controls.target.z=THREE.MathUtils.clamp(controls.target.z,-1000,350);controls.target.y=THREE.MathUtils.clamp(controls.target.y,0,550);updateSun();
  if(!paused&&!document.hidden){droppedSimulationSeconds+=Math.max(0,raw-2);simRemainder+=Math.min(2,raw);let steps=0;while(simRemainder>=1/30&&steps++<60){cbd.traffic.update(1/30,controls.target,controls.getDistance(),camera);simRemainder-=1/30;}}
